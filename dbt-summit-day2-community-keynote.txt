@@ -1,0 +1,704 @@
+These successful businesses know the secret to business success. Play cut support response time by
+80%. Langchain moved from legacy BI to AI self-service in six weeks. Modal opened $100,000,000 in
+new pipeline, three dynamic companies, three soaring success stories, one common secret, success
+powered by Hex. My first company was built around a toy car, testing risk in robots, but the data
+wouldn't stay connected. That became Prefect, putting trust in data orchestration. Arrival company,
+Dagster, launched at the same time. We drove each other for years.
+
+Today, we're joining forces as the data landscape changes. Orchestration once connected a few
+systems. Now machines need to reach across everything. We built the way in, and we're not stopping
+there. Prefect, automate your work. Take your seats. We are about to begin. Are you ready?
+
+Five, four, three, two, one. Please welcome to the stage, player one, Rick, Gohee. And player two,
+Jeremy Cohen. Why do you get to be player one? Oh, I I I negotiated it as part of the merger
+agreement. Ready to play? Beginner, intermediate, expert. We've already beaten all those.
+
+Let's play the secret level. Up, up, down, down, left, right, left, right, b, a, select dbt. Welcome
+to dbt Speed Run, champion level. The race for the jack will come. Players, are you ready? Ready.
+You brought our power ups? Green shell, red shell, z shell, power shell.
+
+Our first race track, metadata circuit. Players, please select your vehicles. Should we go with our
+tried and true classic model, v one dot 12 engine? A bit slow off the starting gate, but battle
+tested. No. No. Jeremy, didn't you hear which track is up first, the metadata circuit? We're gonna
+need a vehicle capable of hitting those tight agent turns, something fast out of the starting gate
+with strict validation and well structured metadata artifacts.
+
+Do you mean v 2 dot o. Are you sure we're ready to upgrade? I've heard that when other players took
+two dot o out for a spin, they saw all sorts of warning lights, deprecated configs, features not yet
+supported. Hey. Hey. It's true. When we were racing the DBT speed run over a year ago, the new
+engine was still a pre release model. But the whole pit crew has been in the shop working hard on it
+over the last eighteen months.
+
+I mean, you heard what Elias said yesterday. There are now more than 9,000 weekly active projects
+running on v two. And everyone in the community played a role by taking the new engine out on the
+test track, opening up bug reports when it didn't work quite right. Thanks to everyone's time and
+energy, v two is ready to race. So just to be clear, we're talking about the Fusion engine. Right?
+Right. But it's no longer a separate thing anymore.
+
+This past June, we announced that the foundation of Fusion, the Rust rewrite of the DBT framework,
+would be the unified open source standard for everyone in the community. And just yesterday, we
+announced that that new engine is generally available as DBT v two. Not DBT fusion, and also not DBT
+core. Just dbt. Those core infusion names were helpful when they were describing two separate
+engines and two separate code bases. But now we have one engine and one code base. D b t v two is an
+installable binary with all of the adapters bundled in that you can run anywhere. And we publish two
+distributions of v two.
+
+The superset dbt, which includes everything. All of the features of the dbt framework supercharged
+with SQL comprehension. It's totally free to use with additional features you can pay for only if
+you want. Things like dbt state. We also publish a subset distribution, which is named dbt o s s,
+where the OSS stands for open source software. You see that includes only those components that have
+an Apache two license. That means the dbt OSS does not have any features powered by SQL
+comprehension, such as static analysis or linting. Those are proprietary.
+
+They're only available when you're using dbt. But both of these distributions are developed in one
+shared code base. So if we make an improvement or fix a bug in that shared code, it's immediately
+available in the next release of dbt and the next release of dbt oss. And regardless of which
+distribution you choose, it's still a single framework. So your critical business logic is portable
+in both directions. So which distribution should I use? Well, if you're a dbt platform customer,
+it's easy. You're getting dbt the superset.
+
+It's the more capable distribution with the full feature set. And if I'm upgrading from dbt core v
+one? Well, then it depends. We actually talked to a lot of community members ahead of this launch,
+and different people have chosen to use core for different reasons. Maybe I'm using core today
+because I want to use dbt on the command line. See, for many data people, dbt was one of the very
+first CLI tools they ever used. It was through learning dbt that you also learned to get the
+terminal, IDEs, the whole software development toolkit. If that sounds like you, you should use dbt,
+the superset.
+
+It's the best and it's still a CLI that you can use locally or run-in production environments. Now
+what if I'm using core because I want the one I can use for free? No cost to get started, to scale
+up, to put real data work into production. Well, dbt is completely free to use, so you should use
+that one. Now there are extra stuff you can pay for if you want and ways that you can connect the
+CLI to dbt platform so you can unlock additional features without having to fully migrate. But
+there's no cost to use dbt the way you're using it today. V two is just better. Now what if I'm
+using core because I want a fully open source implementation of the dbt framework with an Apache two
+license?
+
+Meaning, I can use it. I can change it. I can build on top of it without asking permission from dbt
+labs or from anyone else. That is exactly what dbt o s s is for. We know that there are a whole lot
+of reasons why people want to or need to use fully open source software. And this distribution is
+for those folks. Open source is literally in the name. Now it is less capable than the full superset
+dbt distribution, but it can do everything that dbt core v one can do and much more.
+
+Even though we are retiring the dbt core brand, our commitment to open source remains exactly the
+same. We believe it is vital to our company and to this community that there is always a fully open
+source implementation of the dbt standard. And that open source standard has seriously leveled up
+this year. See, in addition to open sourcing the Rust rewrite, we are building new features of the
+dbt framework. Things we couldn't do before on top of that faster foundation and always with input
+from the community. For example, v two ships with a contracted metadata interface called the dbt
+information schema. Yeah. This powers project quality checks and revamped dbt docs.
+
+You know, it sounds like those new metadata features might really help us win our race, you know, in
+the metadata circuit. It's go time. Don't you mean it's Rust time? Alright. We are going to start
+off this race by upgrading our vehicle to v two. So right now, I'm on one dot 12, and I'm gonna
+start by parsing my project, but I'm going to use the v two parser flag. This is going to check my
+project's compatibility with v two while I'm still on one dot 12. Alright.
+
+So it looks like I've got a couple of errors popping up for unused config key key, which is because
+I've got a couple of custom configs in my dim players model. And the v two engine does strict
+parsing, so we're gonna need to clean those up before I upgrade. Alright. So I'm going to use dbt
+autofix to do that. So let's type in dbt autofix deprecation. And dbt auto fix is a package that
+automatically resolves some of these deprecation warnings and helps get my project ready for v two.
+Okay. Awesome.
+
+So it looks like it moves some of those custom configs under the meta key, which is great because
+meta is our reserved spot for custom configs moving forward. Okay. I'm gonna parse my project one
+more time now that I've moved those over. It's running successfully. I think we're ready to upgrade
+to v two. Alright. Now we are really ready to race. So I'm gonna switch over to dbt v two.
+
+As you can see, 2 DotODot two. We're already patching fast, which is great. I can parse my project
+again, and this time pass the generate info schema flag. Yeah. The dbt information schema is, again,
+a contracted interface into dbt project metadata. It's powered by totally new metadata artifacts,
+which are here in the info schema folder under the target directory. Now these parquet artifacts are
+more performant than the JSON artifacts, which you may know from dbt v one. They also have more
+metadata depending on the execution phase of my dbt, run here.
+
+So I parsed my project. Now, I have parsed time metadata. I can also compile my project with, static
+analysis set to strict because I'm using the superset dbt distribution. And this will give me
+additional metadata like column level lineage. If I run my project, I get execution time metadata as
+well. Now I think one of the coolest features of the information schema here is that I can query it
+within the context of my dbt project. So this is the models view of the dbt information schema that
+I can show with show. I can do the same for column level lineage because I just generated that.
+
+Pretty darn cool. And I can run any custom query I want. For example, just to select the unique ID
+from that models view that we looked at earlier. Alright. Grace, I think you're back up. Alright.
+Okay. So I can also write SQL queries against the dbt information schema to check my project
+quality.
+
+Now, we're calling these checks, and you can think of them as validations that you wanna make
+against your project metadata. So for example, I'm going to check out a branch where I already added
+two new checks to my project. So you'll see up I've got this new checks folder, and I've got two
+checks defined here. One, to make sure that all my models have descriptions, and then a second to
+make sure that my public models have owners. Now just like data test, the SQL here is gonna be
+written to find instances in your project that do not meet your expectations. Right? So for all
+models have descriptions, I'm looking for any models that have a description set to an empty string.
+Okay.
+
+I'm gonna run dbt build here, and dbt build is gonna parse my project and then immediately run my
+checks. So you'll see that I'm in the clear for all models having descriptions, but I do have an
+issue with my check for public models have owners because I've got one public model, my dim players
+model that does not have an owner. Now you notice this failed check is failing the rest of my build.
+It's skipping everything else, so I've got to resolve this to move forward. Alright. If I move back
+over to my dim players model, I might get a sense of what happened. When I use auto fix, it moved
+this owner field under the meta key because this is actually not the dbt official way to define an
+owner for your model. The way to do that is to add your model to a group.
+
+We'll go with the all stars group. And then that group is the thing that actually has that owner
+defined. Grace, of course. Alright. We can rerun. This time, I'm just gonna run that check. And I'm
+just gonna select my dim players model to run my checks on just that model. And we're looking like
+we're in a successful state.
+
+Now we are expecting lots more agentic development on this project, so having project quality checks
+is really gonna help keep the race car on the tracks. Alright, Jeremy. Take us around the last lap.
+Okay. Finally, we are going to visualize our projects with the all new dbt docs. So I am going to
+type some familiar commands. Dbt docs generate followed by dbt docs serve. But what I'm about to
+show you is completely new.
+
+See, we knew that dbt docs v1 struggled with performance at scale, accessibility for business users.
+We've rebuilt dbt docs from the ground up, powered by DuckDB and WASM in the browser, which
+preserves the static deployment model that makes it so easy to host yourselves. Let's take a quick
+tour of the new UI. We can check out our models, specifically the Dim Players model that we've been
+looking at. We've got our description here, lineage with an all new DAG visualization. All of the
+our columns, including the the descriptions, the data types, and because we generated it earlier,
+column level lineage. We've also got new and improved search that's faster so you can find resources
+even in the very largest DBT projects. And all of this is powered by the same metadata that we've
+been racing with all along the DBT information schema.
+
+Winner. Look, we got a trophy for upgrading to v two and winning the metadata circuit. We, we use
+the faster v two parser and and then auto fix to upgrade. Then we explored our project metadata
+using the DBT information schema on the CLI, in checks, and in new and improved DBT docs. Now all of
+those features that we just demoed are available in both distributions, dbt and dbt oss. And we can
+use all of our project metadata statically, which means we didn't need to go to the data warehouse
+at all, which made us extra speedy out there. Thank you to all of the members of the community who
+joined us in GitHub discussions and feedback sessions to make those features ready for the race.
+Checks were inspired by many community members who have built tools to solve the same problem.
+
+DBT artifacts, DBT project evaluator, DBT checkpoint, DBT doctor, DBT vet, DBT bouncer. I mean, the
+list goes on. Thank you all so much for showing us that it was time for Chex to be an official part
+of the DBT standard. And we heard from the community that you needed faster and more scalable dbt
+docs. We explored different architectures. Over the past few months, we also learned that you wanted
+a CLI entry point to that same metadata and a static site that is easy to self host. So thank you to
+help for all of the help, in helping us build the right thing. What?
+
+We leveled up. Now we could have done that race with dbt core v one. It is still being maintained
+and it will be for years. But then we couldn't have used the dbt information schema or project
+quality checks, which are only available in v two. As with any new major version of software, new
+features are going to land in v two moving forward. Well, that was fun. Okay. I'll, see you at the
+party tonight.
+
+Right? No. No. Jeremy, that was that was just the first track. I mean, we've got the rest of the
+Jaffel Cup. Come on. Which track is up next? Players, get ready for the semantic loop de loop.
+
+This track will test your speed and accuracy with conversational analytics. I remember this one.
+Dozens of loops, the course subtly changing shape each time as new questions get asked. Lots of pit
+stops to refuel while we rate wait on those remote data warehouse queries. The v two engine strict
+SQL validation could help, of course. Wait. Sorry. Did you say lots of pit stops to refuel?
+
+I mean, that sounds slow and expensive. Gas prices these days. Am I right? But that's just how it is
+for everyone. We have to get our fuel from the pit. What if we didn't? What if we could access our
+data on the track and refuel while racing? I mean, that means we could be so much faster than all
+the other players.
+
+Right? Sometimes faster. Other times we might wanna optimize for fuel efficiency. It's definitely
+more flexible. I mean, we could mod our fuel injection, adapt it for each race track. Or even adapt
+it for each loop, each data question. But to do that, we'd need to be able to freely access our data
+anywhere. And That's it.
+
+We need to go and free our data. Okay. Where is it? I mean, it's just in the data warehouse. Right?
+Right. Right. But where is that?
+
+You know, I've never really thought about that before. I think we have some tracking on it. Find my
+data. That's funny. It looks like our data is in the Walled Garden. I haven't heard of that race
+track in the dbt speed run. That that's because it isn't in the dbt speed run. What do you mean?
+
+Jeremy, the walled garden is outside of dbt. Outside dbt? That's right. But I've never been outside
+dbt. Me neither. I mean, not really. I went to AWS re:Invent once when I was a little kid, but
+that's it. But I wanna win the entire JAFFL Cup.
+
+And if that means going to this walled garden, leaving the dbt speed run, then I don't wanna leave
+this place, dbt. This is all I know. Hey. I love racing with you. But all this time, our data has
+been far away in some walled garden, and we didn't even know. I mean, if we are going to free our
+data, race faster, cheaper, adapted to each track, each loop, we're gonna need to leave our comfort
+zone, go out and explore the wider world. You know? I've got this funny feeling that we've got a
+part to play in something bigger.
+
+How do we even get there? Our cars are built for race tracks, not off roading. What was that? Look.
+The map just updated. It looks like we'll be taking public transportation. Come on. Let's go to the
+train station.
+
+Oh, look. We're at the train station. Arrow Central Station. Arrow as in Apache Arrow, the language
+independent column or memory format? What does that have to do with our journey to free our data?
+I've got no idea. We should find someone who knows more about what's going on here. Hey, Grace and
+Jeremy.
+
+Oh my gosh. Everyone, please give a warm welcome to Matt Topol. Matt is cofounder at Columnar and on
+the project management committee of Apache Arrow and Apache Iceberg. Matt, we're trying to get to
+our data, which is trapped in a walled garden far away. But we're new to this whole Arrow transit
+situation. Can you help us? Absolutely. Let me, take you on a nice little tour.
+
+Okay. Let's start off with what is aero, what is ADBC, how are these different from older methods of
+database connectivity? Yeah. Of course. So Apache Arrow, you know, is a column oriented in memory
+data format. It's a it's a spec. It's how you lay the bytes out in memory so that everything talks
+the same way, and you can avoid those costly serialized and deserializations. ADBC is your
+connectivity standard.
+
+It's how you talk to databases and get the data back. Historically, you had ODBC, JDBC, which
+everyone's probably very aware of how awful those are to use and how slow they are. And a lot of the
+problem is because almost all of your analytical systems nowadays are column oriented for
+vectorization, SIMD, all the things that make them fast. But ODBC and JBC are row oriented, so you
+have to transpose everything in the rows to get it across. And then all of your data framework, all
+of your engine, the dbt engine, it's all column oriented. So you're transposing it all back into the
+columns again. And those transitions are slow. A to b c, being arrow as the communication, lets it
+stay column oriented the whole way through.
+
+You avoid those costly transpositions. So instead of going columns to rows, back to columns, it's
+just columns, columns, columns. Awesome. Okay. Can you talk to us then about why you started
+columnar and maybe some of the projects that you're helping drive right now in a b b c? Absolutely.
+I mean, so we started columnar because we realized that to get the to get vendors to actually adopt
+and use ADBC, you have a kind of chicken and egg problem. Applications weren't using ADBC to connect
+to things because there weren't enough drivers, and vendors weren't building drivers because the
+applications weren't using it yet.
+
+Right. And so we can kick start the ecosystem by columnar building drivers as a starting point. And
+then we can build on top of that and build other things eventually, but we need to make it easy for
+developers to use it. We need to make it simple. So, like, columnar, we put out an open source CLI
+called DBC, which you can use to manage all of your drivers. We it's like UV for drivers. You know,
+it's package manager for drivers. You can just write in DBC install BigQuery.
+
+DBC install Snowflake. And it just puts it in the right place, and you can use it from any
+programming language you want using the driver managers, and it's just that way. So we have all this
+stuff going on with that CLI, CDN, all your security, your your your control. Yeah. Your chain your
+supply chain. And then we're building out, you know, even more features into the ADBC standard. You
+know, because we also might maintain standard. Yeah.
+
+Awesome. I mean, Matt, you are on the project management committee of Apache Arrow. Yes. Also of
+Apache Iceberg. Yep. Can you tell us a little bit about your open source journey? How did you get
+involved in starting to contribute to projects? And then what does it mean to be a PMC member now?
+
+Yeah. So, long, long time ago, I was at I I had a problem I needed to solve. And I went to an old
+Strata Hudupe conference, if anyone remembers those. They don't exist anymore, unfortunately. But so
+I was walking around, you know, asking, you know, for advice from people there and ideas to solve my
+problem. And kept getting told I had too many requirements. And I was like, those those are my
+requirements. But I learned about Apache Arrow, I learned about Apache Parquet while I was there,
+and ended up just kind of hacking together a solution that worked and ran into a couple issues, you
+know, some bugs, some problems, some, you know, crashes, and started contributing fixes.
+
+And then from there, I just kept getting more involved in the Arrow community, contributing more
+fixes, contributing features, improvements, just because, well, it's stuff I wanted, I needed, and
+then the community benefits, we go from there. And over and over time, I just ended up becoming a
+committer and then eventually a PMC member of the project management committee. And so the project
+management committee, we're just we are the ones who guide the project. You know, if you wanna if
+we're gonna add a new committer or new do a new release Or change the spec at all, you know, for
+Arrow Iceberg, you know, it's just part of ASF governance that the PMC votes, and you need a certain
+number of PMC votes to make these changes to the project and just keep guiding it down the right
+ways. That's awesome. That's super inspiring as someone who got involved in open source in a pretty
+similar way. If there's anyone out here that is interested in learning more about Arrow or maybe
+even contributing themselves, what would be the best way for them to get involved? Well, you've got
+the dev mailing list, you know, dev@arrow.patch.org.
+
+You've got, you know, the website itself has plenty of information. The repos have lots of issues,
+have good first issue, great starting points. Classic. And then I have a talk tomorrow Yes. Where
+I'm gonna be talking about, you know, all the stuff we've done with ADBC and what we've learned from
+in production with it. And so come see my talk tomorrow at eleven. Shameless plug. Sorry.
+
+But yeah. So yeah. It it's a matter of just find things that are you are passionate, that you use
+directly, and then you and then and then contribute things that you need is one of the best starting
+points for getting involved in open source. And if you have any more questions, just fund me. I love
+talking about it. Thank you so much. So here, I have something for you guys. Oh.
+
+Wow. It's a train pass? Yep. So that's right. You can use this train pass and go anywhere that the
+driver supports as fast as the air replies. You can also petition for more drivers to be made. Yeah.
+Thank you.
+
+Whoever's popping. Thank you. Petition for more drivers to be made. You can be part of the building
+crew laying new tracks to new places because it's an ever expanding network, and we're building it
+all out in the open. It's all open source and easy to use. Okay. Can we take this ADBC train to the
+Walled Garden? Yep.
+
+But if you're headed there, first, you need to stop you should stop in Iceberg and meet the new gym
+leader. He'll have some new stuff to teach you about all the other open standards that can help you
+on your journey. Thanks, Matt. Thanks, guys. Wow. Okay. So what did we learn? ADBC is a fast and
+standard mode of transit for connecting to analytical databases.
+
+Because the data is already stored in columnar format, it should be sent and received in columnar
+format too. That way, it can be super fast, like a high speed train running on dedicated track. No
+need to switch gauge partway through. That's actually why we adopted ADBC for DBT v2 as the standard
+connectivity for all of our adapters. Look, we leveled up. We must be on the right track. Ready to
+transit? Let's go.
+
+This is an ADEC train making all stops. The next stop is Iceberg. Stand clear of the closing doors,
+please. Here we are in Iceberg. That was fast. Thanks to the power of Arrow. If you see something,
+say something. Report any unattended data files to your cloud service provider or iceberg catalog
+maintainer.
+
+Okay. Matt said that we should try to meet the new gym leader, to learn even more about open
+standards. Oh my gosh. It's the gym leader. Everyone, please give a warm welcome to Hannes
+Moulaysen. Hannes, you are the cocreator of DuckDB and cofounder of DuckLabs. Will you teach us?
+First, you have to defeat me in battle.
+
+What? Just kidding. But pretty good look on your face there. Everybody is welcome to come learn an
+iceberg, and it's never been easier to get started. Okay. Let's start off with talking a little bit
+about compute. What was the motivation for you creating a new query engine eight years ago? Yeah.
+
+So we, actually started talking to people, data practitioners, at the time, and they told us that
+they really didn't like databases. And that really hurt our feelings because we like databases. So
+we started thinking, why is it that they don't like databases? And maybe that's something that we
+can do something about because maybe those reasons are not really fundamental but more like little
+nitty details. But the more we thought about it, the more we realized that we really had to start
+from scratch, which I cannot recommend. And so we eight years ago, we started writing Daxby from
+scratch. And, yeah, it's been a journey. Okay.
+
+Let's talk about open storage now. Talk about that compute. Now, despite being gym leader here in
+Iceberg, I understand that you are not actually the biggest fan of Iceberg, the open table format.
+You proposed an alternative approach with Duck Lake. Can you tell us a little bit about the
+differences between Iceberg and Duck Lake? And why you have nevertheless invested a lot in Iceberg
+support in DuckDV over the last year? Yeah. So this is a very interesting question, and I'm sorry to
+be right up after Matt to, slam my iceberg.
+
+But, we really like the idea of open table formats. It's something that really makes sense to us,
+and it's really great for an engine like DuckDV to be able to go into the walled garden and read
+data. But when we looked at the iceberg spec that you can see here, you saw a lot of these, like,
+arrows and little files, and they're all connected, and it's all a bit complicated. And then at some
+point, the catalog was added on top and you see this kind of barrel shaped thing up there. And so we
+thought that looks like a database to us. And maybe we can actually use it to store all this
+metadata stuff as well and thereby simplify it greatly and make it faster and so on. But to your
+other question, why have we nevertheless invested in iceberg is because even though we think Duck
+Duck Lake is a is a great solution, we also realize that our feelings, you know, really don't solve
+people's problems and it's true. And, you know, we we we just wanna, you know, be be sure we are we
+are there for people when they need us.
+
+And so we've spent a lot of time and money indeed, to make, Iceberg support in DuckDuty absolutely
+awesome. So if people are storing their data in Duck Lake or in Iceberg, they can use DuckDV or They
+can use DuckDV. Yeah. For sure. It's it all works. Awesome. Okay. Another question here.
+
+There is a large growing dbt community of people that are using dbt and DuckDV together. Duckd b is
+actually one of our top five most popular adapters now. So for your team that is building duckd b,
+what has been the importance of dbt? I think what's really interesting is, that I have to confess
+that database engineers actually don't have data problems. Because, you know, we write code and we
+run tests and we we don't really have big files. Like, it's it's, it's kind of a funny sort of, you
+know, contrast if you want, or contradiction. But what is really awesome, I think, about the DBT
+community is that, you know, making stuff in SQL is really, you know, something that you guys are
+liking and that's really, you know, I think how we connect and, you know, we are here for you.
+Awesome.
+
+Okay, Hannes. A little bit of a spicy question here. So people are often asking us how DBT will
+evolve as an open source project as DBT Labs, the company grows and changes. You recently announced
+that DuckLabs will be joining AWS. That's right. What does this mean for the future of DuckDV as an
+open source software? Yeah. That's a great question.
+
+And, I think what's important to understand is that, there's two answers to this. One is, legal
+perspective because DuckDuty is an open source project, under the DuckDuty Foundation, which is an
+open source foundation. That's, yeah, that's a foundation. And then DuckLabs, the company that got
+acquired by Amazon. But, actually it's actually Amazon is committed to keep DuckDV also, you know,
+alive and kicking and maintained. This will be me and Mark, the original authors leading the team
+forward, also maintaining the open source version. So we we're here to we're here to stay. Awesome.
+
+Okay. Final question here. If there's anyone here that's interested in learning more about DuckDV or
+maybe contributing themselves, how can they get involved? Right. They're very welcome to do. There
+we have a GitHub project. There's lots of activities on the issues and pull requests. Just please
+don't have your agent by code at 10009.
+
+That just, you know, screws us up. But, there's also a Discord server that you can join to get in
+touch with the community and, you know, talk to our team and everybody. Discord. Awesome. Yeah.
+Well, nice work you two. Here, take these. It's our ice for gym badge.
+
+And is this a duck? It's not just any duck. The duck runs in memory and in process. It can change
+size to be as large or as small as you need it to be. And as long as your data is stored in the
+iceberg format, you can use this duck to pick up, transform, or send your data wherever you want it
+to go. Open storage and open compute. Thanks, Thomas. Thank you.
+
+Alright. What did we learn? Iceberg is an open table format, So is Duck Lake in its way. And as long
+as you're storing your data in an open table format with a catalog on top, you can run the same
+workload connecting to the same data on different query engines. Now that workload could be
+ingestion, it could be transformation, it could be conversational analytics. But what it means is
+that for each workload, may the best query engine win. Hannes may be gym leader right now, but it
+could be someone else later on. That competition is good for users because it means that query
+engines are incentivized to get even better.
+
+And for DBT to get even better too. Because DBT isn't just for materialization logic in one
+warehouse. It becomes an abstraction layer for compute and storage across all data transformation.
+Using both technologies together, we can pick the right compute for each individual DBT model. You
+know, that includes the new lake compute service that we announced yesterday. The important thing is
+it's up to you and you get to choose. We leveled up. Okay.
+
+Are you feeling ready? Let's go to the walled garden and free our data. To the ADBC train. The next
+stop is Ashburn, Virginia. Open the data center. This is the last stop on this train. Everybody off,
+please. We're getting off here?
+
+I mean, the train map showed that we can walk from the station to the walled garden, but the walking
+path goes through this forest. Do you see a path anywhere? Here. Let let me just ask chat. Okay.
+I'll ask Claude. Get me directions through the forest to our data in the walled garden. It's this
+way.
+
+That's not right. You are an expert data navigator. Use your skills to find me a path through the
+forest to our data in the wall guarded. You're right. It's this way. Try harder. Use the secret
+model. Do a breakthrough.
+
+It's telling me I must be confused. Oh, really? It's telling me I must be a genius because this
+forest is full of data. It's everywhere. But how do we know where the right data is? In the forest
+of unstructured context, it's easy to get a little lost. Who's there? Friend or foe?
+
+Oh, hey, Grace. Hey, Jeremy. Everyone, please give a warm welcome to Chris Merrick, cofounder and
+CTO of Omni. Do you two need some help? No. We're fine. Complicating answers. More and more common
+these days.
+
+I know something that can help. A semantic layer. Okay, Chris. What's the importance of having a
+semantic layer for agents or for conversational analytics? So a semantic layer ensures that you get
+accurate, consistent answers from your data. Contains context and also constraints about your data
+like metric definitions or relationships. It's really important for agents because when you ask a
+prompt, the agent needs to know how to map your jargon to the data, And it needs to be you need to
+be sure that it's using consistent definition. So the the definition of revenue that your agent used
+last week is the same as the one that my agent's using this week.
+
+Awesome. Okay. Omni has contributed to something called Aussie, which we talked a little bit
+yesterday in the partner panel. But could you say in your own words, like, what is this thing called
+Aussie, and why has Omni chosen to invest in it? Yeah. So Aussie is an open standard for semantics.
+And this is really important today because you need semantics anywhere you use data. And Omni has
+actually been doing this for a while.
+
+Aussie is a new project, but years ago, Omni invested in an integration to dbt Because we wanted to
+integrate all the semantics about your data from dbt up into Omni, and not have you have to maintain
+both definitions in two places, duplicate and maintain those things. Makes a lot of sense. If
+someone here is interested in on, in Aussie, sorry. How could they get more involved? Yeah. It's the
+same answer you heard from Hannah and Matt. It's you come to the GitHub repository, check it out,
+contribute. There's a Slack channel for conversation about the project, and we welcome all
+contributors.
+
+Okay. Last question, a little bit of a fun one, but you actually have a very special role in the
+history of DBT because you used to work with Tristan, Drew, and Connor at a company called RJ
+Metrics where DBT was born ten years ago. Could you talk a little bit about what your motivation was
+for creating dbt as an open standard way back then? Yeah. And again, it's the same story as all
+these other open standards. We were having conversations. Right? We were talking to data teams and
+this this is back at the advent of the cloud data warehouse.
+
+Right? We we heard the same story from a bunch of different data teams. It was, hey, now that we can
+do our data prep and transformation and modeling in SQL, instead of having to write like a Java or a
+Python program for it. We're we're trying to do all of it there. So we built this cool little script
+that makes a dag out of our SQL, prep scripts, and ensures that we do that consistently and
+understand the dependencies between it. And we, after hearing this a few times said, maybe we could
+write that script once and then let the whole community build on top of it. Nice. And that's how dbt
+was born.
+
+That's how dbt was born. Okay. Thanks, Chris. Here. Take this. Woah. It's a pamphlet? It's a
+wilderness guy.
+
+Explains the trail markers which have been etched into the trees, just like how authi translates
+semantic definitions into each tool's language. The forest, a bunch of structured context is
+constantly growing, always changing. So the trail markers change with it. Chris Merrick, everyone.
+Thank you. Thanks, Chris. Okay. So what did we learn?
+
+Aussie is an open standard for semantic interchange. It means that a metric can be defined once and
+then translated, so it preserves its meaning for any other data tool in the ecosystem, including d b
+t, so that we don't lose the forest for the trees. Look at that. We leveled up. With these trail
+markers and that wilderness guide to translate them, we should be at the walled garden in no time.
+We made it. The walled garden. It's, it's taller than I thought.
+
+We always knew it would be tall. Hyper scaled. And it's surrounded by a moat of lava? Right. Okay.
+Let's put our heads together. Maybe we can build a bridge or or fashion a grappling hook. We have,
+dbt, a trophy, a train pass, a badge, a book, and a duck.
+
+I mean, how do we even know this is the right place? I mean, maybe our data's in another castle.
+It's definitely in there. The ADBC train and the Aussie trail markers led us here. We can access our
+data via iceberg and transform it with our size shifting duck. We put our trust in the same open
+standards that are driving the ecosystem forward. But may maybe we don't we don't need to free our
+data, you know? I mean, it's a garden after all.
+
+Maybe it's happy in there. What's gotten into you? This doesn't sound like the Grace I know. The
+Grace who wants to win the entire Jaffle Cup. I just I don't see how we're gonna get inside. I mean,
+there's not even an entrance. Look. I woke up this morning expecting it to be the same as any other
+day.
+
+We race. We win. We go to a nice party afterwards. Instead, you made us go on a huge adventure to
+free our data. And now Hey. And now we're actually doing it. We've made it this far. We've worked
+with friends across the industry.
+
+We have I have learned so much more about the wider world. I don't think we can just go back to the
+way things were now that we know another way is possible. I just don't know how we're gonna get
+inside. I mean, I'm just one player. I can't do it all by myself. And and we're so far from home.
+You're not by yourself. You have me, player two.
+
+And you have all of them. The the the dbt community? Yes. They've been with us all along for every
+step of this journey. Maybe you can help us. We need confidence and creative inspiration. What you
+need is a power up. Momoaji?
+
+What's up, DBT? Oh, yeah. We're back, baby. We're back. Here's the thing about community. You can
+put 70,000 people into the same Slack, and that doesn't automatically mean that they've found their
+people. Because the bigger a community gets, the more important it becomes to make it feel small. A
+year ago, we started finding people around the world who could help us do exactly that.
+
+People who knew their local communities and could make this huge space feel a little more like home.
+We called them the dbt Igniters. And once we found them, I had to set them up for some sex, for
+success. So I shared my playbook. I popped into local channels all over the world, like, good
+morning, my neighbors. What problem is this solving? Engagement. Yes.
+
+Yes. Engage you too. It's going really well. Before long though, I I realized something. Okay. So
+the Igniters didn't need my playbook. They needed the space to build their own, and that's exactly
+what they did. Eventually, nine of those Igniters became founding dbt champions.
+
+And they taught us something. Community isn't about getting people to engage like you. It's about
+making room for people to show up like themselves and show up for each other. Today, we're
+celebrating 40 people who keep making that same choice. Let's meet them. Our first award is
+Ambassador of the Year. Alright. So ambassadors are those first people you meet that make the space
+feel smaller.
+
+They're sort of like that really eager attendant. You know the type, the flight attendant. Hi, hi.
+Welcome to the community. Hi, hi. Welcome to the community. Hi, hi. Oh, nice YAML.
+
+Hi, hi. Damn. Look at that lineage. Our finalists are Oleg Agapov, Cesar Klave, David Effion, Anars
+Boy Herz, and Bruno Lima. Your 2026 ambassador of the year is Bruno Lima. Congratulations, Bruno.
+But sometimes community doesn't just need someone to welcome you to the room. Somebody has to build
+a room.
+
+Our meetup organizer finalists have done exactly that. Our finalists are Jeremy Chia, Okpayemi
+Fabiyi, Karen Shea, Shinya Takimoto. Your 2026 meetup organizer of the year is Jeremy Chia. Let's
+go, Jeremy. Now our next award recognizes another essential form of community contribution. Memes.
+Because sometimes you don't just need documentation. Sometimes you just need someone else to say,
+Yeah, this is fine.
+
+Our finalists are Josh Devlin, Tian Kai Feng, Ken Kwan, and Ivan Zakoff. Your 2026 commit comedian
+of the year is Ken Kwan. Let's go, Ken. Okay. So so data engineering is a strange job. Alright.
+Follow me on this. When everything works, nobody knows your name.
+
+But when it breaks, everybody knows your name. I don't know. Cheers. Our finalists for data engineer
+of the year are, Ian Andrian, Alex Antonison, Suraj Uswat Narayanan, and Kartik Rajasekaran. Your
+twenty twenty six data engineer of the year is Karthik, Karthik. Yes, Karthik. Okay. So analytics
+engineers, right?
+
+Y'all y'all are a fun type. Analytics engineers take seven definitions of customer, four definitions
+of revenue, and that spreadsheet that nobody wants to talk about, and somehow turn it into one
+source of truth. Our finalists are Manikanta Devela, Okpayami Fabiyi, Angela Alves Ferreira, and
+Sebastian Freeman. That's that's some tough competition. Your twenty twenty six analytics of
+engineer of the year is Angela Alvis Ferreira. Now beyond the work that earned her this award,
+Angela has personally mentored eight women as they moved into analytics engineering. And one of
+those women is now mentoring others herself. I think that makes her a grand mentor.
+
+She's a grand mentor. Congratulations, Angela. Okay. Millions of rows, six dashboards, three
+stakeholders, one data analyst. It's called data analysis, not magic. Our finalists for data analyst
+of the year are Eber Randao, Selim Litzfa, Harshita Lugnathan, and Adeida Mola Onobanjo. Your twenty
+twenty six data analyst of the year is Salim Lestra. All the way from France.
+
+Congratulations, Selim. Okay. So technical contributors, we gotta talk. Y'all are wired a little bit
+differently. Most of us see a bug and think, ugh. They see a bug and say, oh. Our finalists are
+Frederick Cornwall, Yu Ishikawa, Muiz Latif, and Dazuke Tanwaki. Your twenty twenty six technical
+contributor of the year is Tasuke Taniewaki.
+
+Congrats. Congrats. So we have design partners here at dbt. These design partners, they look at
+something we've built, take a breath, and say, I have Fox. Which really is just a professional
+version of, Honey, we need to talk. Our finalists are Peter Empey, Jenna Jordan, Sophie Lee, Alex
+Stevens, and Koen Verblac. Your twenty twenty six design partner of the year is Sophie Lee. First
+timer.
+
+Congrats, Sophie. So AI innovators have a very particular response to two words, what if. Most of us
+can see that question, ask that question, and move on with our lives. These strange folks need to
+find out the answer. Our finalists for AI Innovator of the Year are Vince Faller, Vishal Gupta,
+Emily Hawkins, and Darcy Norman. What a group. Your twenty twenty six AI Innovator of the Year is
+Vince Baller. Let's go.
+
+Proud of you, Vince. And that brings us to our final award, community champion of the year. Now
+these folks, they don't just participate, they make it easier for the rest of us to do what we do.
+What makes this award especially meaningful though, is that these four finalists were chosen by
+their fellow dbt champions. The ones who get to see up close how they show up for others. Marcelo
+Borg, the good neighbor. Marcelo is that guy who raises his hand and actually stays for all the work
+that comes after. In just three years in this community, he's given his time, knowledge, and energy
+to the people around him.
+
+Jeremy Sheehan, the connector. Jeremy welcomes newcomers, helps people find the communities where
+they belong, and even builds analytics for meetup organizers so they could create connections
+better. Bruno Lima, the teacher. We don't talk about Bruno. We're gonna talk about him today. Bruno
+has taught more than a thousand practitioners. And whether through training, content, meetups, or
+Slack, he is determined that whatever he learns doesn't stop with him. And Celia Marla, the rising
+tide.
+
+Celia brings her ideas and expertise freely to others. And as one of her fellow champions put it,
+she brings us all up with her work. Just don't go boulder climbing with Celia. I'll warn you now.
+The good neighbor, the connector, the teacher, the rising tide. Four different ways of making
+everyone around you better. Our 2026 community champion of the year is Marcello Moore! Back to back,
+lady!
+
+Marcelo was our community champion last year as well. Three years ago, he was new to this community.
+Today, he's won its highest honor twice. And Marcelo is part of a larger group of people I'd like us
+to recognize. Earlier, right, I told you that nine of our igniters went on to become founding dbt
+champions. Today, there are 30 of them and they're in the house. dbt champions, please stand up.
+Give them a hand.
+
+Give it up for them. Give it up for them. These are people who teach, who connect, who answer
+questions, who give their time to someone else's problem. Thank you for everything that you do.
+Listen, we're all here today in Vegas because somewhere along the way, somebody stopped and showed
+up for us. dbt community, your words matter, your work matters, and your voices matter. Don't let
+anyone ever tell you different. Thank you for showing up.
+
+Thank you for showing up today. Grace, Jeremy, you said you needed a power up. I don't know. I think
+we just found it. Alright. Thank you. That was the power of the community, man. It it is just what
+we needed.
+
+Everyone, please give another huge round of applause for Balaji and for all of our award winners.
+Woo. Okay. Now that we're powered up by the community, we're ready to take on the walled garden. Now
+we can't go across the lava. We can't go over the wall. I mean, maybe maybe they've got an idea. I
+mean, our best ideas come from the community after all.
+
+Hey, champion Puja. What what what do you think we should do? Go under? Under the mote of lava and
+the extremely tall wall? But how? Check your inventory. Champion Puja, is this a magical shovel
+capable of deploying data pipelines anywhere to provide us with safe passage even under the mode of
+lava and over the extremely tall wall and at and under the tall wall and into the garden? That's
+that's amazing.
+
+That's just what we need. Okay, everyone. We are actually going to need your help to deploy a very
+special data people pipeline. Now see, if you are sitting near or next to these middle aisles, I'm
+going to ask you to please stand up and step into the aisle. I'm completely serious. Alright. Fill
+the aisles. Fill the aisles.
+
+Middle. Middle. Yeah. Feel free. Now you're going to find a partner on the other side and form the
+data pipeline like this. Okay. You don't have to be touching. You can leave a little bit of room.
+
+We're sending a lot of data through. K. Is everyone ready? Yes. Grace, are you ready? Let's do it.
+Let's go get our data. Okay.
+
+We're going under. Woo. Okay. Thank you. Oh my gosh. Hey. What's up? Thank you.
+
+Thank you. Okay. Round the lap. Hi, Courtney. We did it. We rescued our data. Now that we have
+unrestricted access to our data, we can finally try racing on the semantic loop de loop. And we can
+do it all powered by open standards.
+
+Flexible, accessible, fine tuned to each goal. The future is still unknown. Open standards take
+time. But I think together we've got a shot at winning the entire Jaffel Cup. Thanks for going on
+this journey with us. We spent years in our comfort zone as dbt experts. But dbt is part of a larger
+world. As soon as we stepped out, we started leveling up so fast.
+
+Learning other tools, other technologies Other open standards and the other communities built around
+them. We realized that a lot of dbt community members are already members of those other communities
+too. And so are we at dbt Labs and Fivetran. Our team that has been working on dbt v two has been
+contributing to Arrow and ADBC. Our teams working on the new Lake Compute Service have been
+contributing to DuckDB and Iceberg. And our team working on the dbt semantic layer has been
+contributing to Authy. And we are proposing new open standards too. Yesterday, we presented about
+agents schema, specification for centralizing context in the data warehouse and dbt charts, a new
+open source library for data visualizations defined in YAML right alongside your dbt code.
+
+We're also stewarding Great Expectations, the open source data quality framework. We're involved in
+these projects and we're part of these conversations because we want to be a part of shaping the
+future of how data work gets done. And we want you all to be a part of it too. If you want to get
+more involved in open source and in open standards, but you're not sure where to start Remember that
+dbt itself is an open standard and is a great tutorial. We care deeply about making this a thriving
+open source community. So whether you're here in person or joining us online, you're already a part
+of it. If you use dbt today, you have a valuable perspective, and we want to hear it On GitHub, on
+Slack, and all of the places where the community works. And we want the dbt community to be a place
+where you can level yourselves up too.
+
+See here at dbt Summit, we're going to have breakout presentations by all of our guest speakers,
+Matt, Hannes and Chris, as well as many others so that you can learn more about all of these
+projects and how you can get involved. So that we all have a voice in the future of open data
+infrastructure. Because when the dbt community speaks, these big players listen. Companies are
+building ADBC drivers, single node query engines, Aussie compatible BI tools. Even the very biggest
+walled gardens are now integrating OpenTable formats like Iceberg because you tell them it is
+important. It's easy to feel small before the changes happening all around us faster than ever
+before. But look around. Together, we are not small, and our journey is just beginning.
+
+Alright. Let's get this day started. Okay. We've got a packed schedule of great breakout sessions.
+The Discovery Hall Hall Hall will be open all day. Tonight, to celebrate our arrival in the open
+garden, we're going down into Wonderland. It's our dbt party at the Marquee Nightclub right here in
+the Cosmopolitan Hotel. Remember to bring your ID and your conference badge.
+
+And, after that? We rest. No. No. I I mean, next year. We journey back to another world. Resorts
+World in Las Vegas right here, September thirteenth through sixteenth twenty twenty seven. Save the
+date.
+
+Okay. Thank you so so much, everyone. Have a great time at the rest of dbt Summit. Thank you all.

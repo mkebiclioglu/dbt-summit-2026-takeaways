@@ -1,0 +1,1148 @@
+These successful businesses know the secret to business success. Play cuts support response time by
+80%. Langchain moved from legacy BI to AI self-service in six weeks. Model opened $100,000,000 in
+new pipeline, three dynamic companies, three soaring success stories, one common secret, success
+powered by Hex. My first company was built around a toy car, testing risk in robots, but the data
+wouldn't stay connected. That became Prefect, putting trust in data orchestration. Arrival company,
+Dagster, launched at the same time. We drove each other for years.
+
+Today, we're joining forces as the data landscape changes. Orchestration once connected a few
+systems. Now machines need to reach across everything. We built the way in, and we're not stopping
+there. Prefect, automate your work. Take your seats. We are about to begin. Are you ready?
+
+Five, four, three, two, one. Please welcome from the product team at dbt Labs, Grace Goheen and
+Jeremy Cohen. Welcome to dbt Summit twenty twenty six. It is so great to see so many amazing
+familiar faces, and lots of new ones too. Whether this is your first time or your seventh time
+joining us for dbt Summit, hello. Welcome. We are so, so glad to have you here. We've got 2,000 live
+in person attendees from 23 countries and thousands more joining us from all around the world.
+
+Thank you. Make sure to join the DBT community Slack and be part of the conversation happening
+online. Jeremy and I are on the product team at DBT, and we are also so honored to be your emcees
+again this year. This conference is such a special opportunity to connect with the DBT community. We
+get to hear about what you all have been up to. We get to share what we've been working on, and you
+all help us set the direction for the year ahead. Now this isn't your typical summit. You see, here
+we provide guidance to speakers about what costumes to wear.
+
+And I consider that a personal victory. At dbt Summit, you can bring your whole self. For example,
+we may be product managers, but we are also theater kids. And, contrary to what you may have heard,
+we are alive and well. DB or DBT? That is the question. And seen. Thank you.
+
+Thank you all so much. But seriously, even with all of the changes over this past year, a new
+company for us, widespread adoption of AI for the entire ecosystem, the important things have
+remained the same. We're still DBT. We're still building in the open, And we still get to do this
+alongside all of you. So let's have a whole lot of fun this week and make it a summit to remember.
+Okay. So the theme for this year's conference is level up. So you'll notice that there are lots of
+design and experiences inspired by retro video games.
+
+Why? Because Gen X finally runs the world. Or maybe because AI is changing the game of data and
+analytics. Well governed, well structured data is more important than ever before. It feels like we
+are at the start of something new and exciting, and we get to figure it out together. Speaking of
+working well together, we want to thank all of our sponsors without whom this conference would not
+be possible. Take some time this week to visit their booths in the Discovery Hall. Discovery Hall.
+
+And also an extra special thank you to our platinum sponsors, AWS, HEX, and Prefect. dbt success as
+an open standard and as a community would not be possible without its integrations with data
+products across the ecosystem. We are thrilled to welcome all of you to the main stage for this
+morning keynote. We're going to cover some exciting new developments in the DBT product, followed by
+a panel with our partners about open data infrastructure. And tomorrow morning, we will be back on
+this main stage with our community keynote. Open source, open standards, awards, and adventure. You
+don't wanna miss it. Should we kick it off?
+
+Without much ado about Keynoteam, please welcome to the stage our cofounder and president, Tristan
+Handy. And it goes something like Hey, everyone. Welcome to dbt Summit. The artist formerly known as
+wait. The lawyers have told me I can't say that. Well, anyway, welcome to dbt Summit, the
+opportunity for the global DBT community to coalesce together in a single week. This is always my
+favorite week of the year to be with all of you, to reflect on the past year, and to look ahead
+together. I just wish that the past year had more to reflect on.
+
+2026 has been kind of a sleepy one. Right? Isn't that year since too? We're all kinda doing the same
+work, using the same tools. Everything's kinda status quo. Right? Yeah. I didn't I didn't think so.
+
+This is the year that we all shifted from being AI curious to truly AI pilled. This is the year
+where AI didn't just move software markets, it moved copper markets. The demand for copper literally
+has us asking how many copper mines do we need to build by 2030? Here are my favorite few charts to
+summarize what has truly been a wild year. One, overall AI revenue has grown from $60,000,000,000 to
+over a $180,000,000,000 over the last twelve months, tripling at an absolutely massive scale. Two,
+agents took off powered by new models that can complete tasks over longer and longer time horizons.
+A year ago we were at thirty minutes for 80% success and today we're over three hours. The growth on
+this metric is super exponential.
+
+Three, global AI compute capacity continued to triple year over year, now totaling 17,100,000 H100
+equivalents. Our theme for dbt Summit this year is Level Up, and I think you can see why. The
+industry is rapidly evolving around us, and it's on all of us as a community to level up and meet
+this moment. This is a big, big wave. Likely the biggest technology wave that any of us in this room
+will ever live through. And Analytics engineers, we're ready for it. Imagine if we were all still
+organizing our data via spreadsheets that we emailed around to one another or a bunch of SQL scripts
+that we stored on our local machines or that we were using some clunky old ETL product with a
+proprietary GUI. Fortunately, we all use DBT.
+
+We write code and now our agents can write code for us, shockingly well in fact. They can inspect
+and debug our pipeline failures and my single favorite, Adject use case, they can help us refactor
+decades worth of legacy code into fresh, clean DBT projects. Just because we all use DBT, we got a
+ton of stuff for free as coding agents hit their stride. But AI isn't just changing how we build our
+pipelines, it's also changing how we use our data. Over the summer, CloudFlare told us that the
+agentic Internet is here, that the majority of Internet traffic is now nonhuman. Well, I'm convinced
+that the same phase shift is coming for data. Agents are going to become the primary consumers of
+our metrics, our tables, and our metadata. And I think that's great.
+
+It's great because that process, the process of actually deriving insight from, creating value from
+all the data that we work so hard to shift, this is the biggest bottleneck in data. Think about it.
+How often have you been asked to make a model and it never gets used? It's irritating, right? All
+these nodes just end up clogging up our DAGs. But this doesn't happen out of malice or even
+incompetence. It's just a statement that today, or really since the beginning of time, organizations
+have always produced more information than they can act on. But agents are going to change that.
+
+And now it's always useful to learn from folks who are on the bleeding edge. Recently, Ramp, an
+awesome dbt User, launched an internal conversational analytics tool called Ramp Research. With
+reduced friction and instant answers, people asked more questions than ever. 20x in the first few
+weeks and more than 50x within the first six months. And this is just the first wave of agent
+adoption. In the future, it's not going to be humans asking questions and agents diligently doing
+the research. It's going to be agents asking questions and acting on the results themselves. Now it
+is impossible to predict where that world takes us, but what I know for sure is that it makes the
+data that everyone in this room works on more valuable than ever.
+
+Now, of course, there are hard things that we have to tackle in order to get there. We need
+infrastructure that gives agents all the context that they need to navigate our data. We need to
+serve that context to agents efficiently, to avoid context bloat and runaway spend. We need eval
+infrastructure that ensures that every change we make improves the performance of the end to end
+system. Here's the really critical part. The infrastructure that powers all of that needs to be
+open, standards based, and future proof. Because the faster things change, the more that flexibility
+and user control matter. The impact of a bad technology decision and vendor lock in has never been
+greater.
+
+Now a year ago, you heard me say a few big things. I announced our merger with Fivetran, that the
+Fusion Engine represented the future of dbt, and I shared our long term commitment to Open Source.
+And the announcements we're making today are an important step towards living up to these
+commitments. Today, we are announcing the GA of the next major version of DBT, DBT. It's been almost
+five years since our last major version release and with all the innovations of the engine since
+then, now is the right time. Here's the really great news. With V2, we've unified code bases,
+licenses, and innovation across dbt and the fusion engine. Now I got a note over the summer on dbt
+Slack and you know who you are and I appreciate it.
+
+It said essentially, you're making the dbt ecosystem too complex. Too many engines, too many CLIs.
+My response? We're working on it. Give me a minute. Well, with v two, the two engine era is over.
+What used to be split across dbt and the Fusion Engine is now unified into one engine and one
+language spec, delivered as one thing, dbt. And so we're also unifying branding to simply dbt.
+
+We'll be sunsetting the legacy Fusion and dbt brands. It's all just dbt, just the way it started.
+And of course, the heart of v2 continues to be shipped under the Apache two license. I am incredibly
+excited about v2 and about both unifying and leveling up the dbt experience. And there is no one I'd
+rather mark this milestone with than my next guest. They are one of the longest running dbt users in
+the world, and I was so excited to hear that they are currently upgrading to v2. Please help me
+welcome to the stage from Spotify, Tim Leonard. Alright.
+
+You built the first ever dbt project at Spotify. Tell us how it's going. The hub, it's a lot. It's a
+lot. It's a good project. It's overwhelming just thinking about it. The hub my team owns, is powered
+by the oldest and, large dbt project at Spotify. We're the we're the OGs.
+
+Very proud of that. Our flagship project is huge. It's, like, 1,700 models, backed by a team of nine
+dedicated AEs. We're working hard. This is an old project. We started, we started it on dbt, o one
+nine. So, you know, we were growing up right alongside the BigQuery adapter, this whole time. And
+I'll add, we've always been self hosted.
+
+We've always been on the Apache 2.0 distribution. Awesome. So you've been doing your thing for a
+little while. What sparked your interest in the new engine? Yeah. Well, you know, it's just it's
+fast. It's amazing. It's a total game changer for us.
+
+So in our setup, dbt version two compile times are always just about ten seconds. Okay. What does
+that mean? Well, with dbt version one, same project. Our compile times, are ninety plus seconds,
+getting longer as the project gets bigger. So because of that, we prioritized enabling dbt version
+two for local work. That means that today, my team is getting back 10 to 15, percent of their time.
+This alone bought buy in from the start.
+
+But agents are also a big part of how we work now. With dbt version 2, our agentic workflows can
+compile and check times, check code nine times faster. If they were slow before, now they're now
+they can run. So, you know, really, compile times have always been our biggest bottleneck, and now
+we don't have to think about it at all. Just one more thing. We run thousands of dbt production
+workflows every day in production. We estimate that once we bring the compile time reductions, into
+our production workflows, it's something it's going to be something like two hundred thousand hours
+of compute savings that, go away. That is awesome.
+
+How's it how's it going? Is the is the migration been plug and play, or has it been a bunch of work?
+Well, we have a large project, as I've said. Complex, project. I I like to identify ourselves as the
+poster child for a highly complex dbt project. Project. That's what we are. Lots of legacy tech
+debt, custom internal packages, you name it.
+
+My team, love my team. We've got over fifty years of dbt dev experience in the team, which means
+we've pushed dbt to the limits, of what it can do. So our first attempt at Fusion happened in early
+twenty twenty five. We quickly saw roadblocks, conformance issues, minimal BigQuery support. But
+today, progress is immense. No more failure due to edge cases in our models. The SQL compiles
+exactly the same in all cases between, DBT version one and two. BigQuery works just as we would
+expect it to, and the work was minimal.
+
+With agents, plus Autofix, we moved very, very quickly on this. And I have to say shout out to DBT
+Labs, who worked very closely with the Spotify platform team. So much has gone on in the background,
+this past, few years. But thanks to that, when it came time to do this work, I was able to convert
+our very complex project in just a few days. I love to hear it. So I know that you folks care a lot
+about licensing and with the change from Fusion to DBT2, we've changed the way that we license
+things and we are now fully back on the Apache two permissive open source version of the world. Why
+do you folks, care so much about that? I'm glad you asked.
+
+You know, Spotify has to run on prem. We would never be able to go with the managed offering. And
+Spotify is deeply committed to using and supporting OSS. Dbt's commitment to OSS with version two,
+that's what gave us the confidence to start integrating it into our projects. So we are just super
+happy to see the path that DBT version two has taken, not only modernizing the standards but also
+bringing that innovation into OSS. That's awesome. So great to have you here. Thank you.
+
+All right. Thank you, Tim. Appreciate you. Here's the thing though, scaling across an org like
+Spotify is just one proof point of something bigger. Last year when we announced our merger, George
+Frazer and I shared our vision that the modern data stack will evolve into something we refer to as
+open data infrastructure. Not one vendor owning your entire stack, but a flexible foundation that
+teams can modify, extend, and build on. That vision turns one year old this month. And to help me
+reflect on the past year, please join me in welcoming to the stage George Frazer, CEO of Fivetran at
+dbt Labs.
+
+54, 32, 1. What What do you think? We picked your walk on song for you. It's great. It's, you know,
+all great. So you've spent the past year learning a lot more about the dbt community. You've gone to
+meet ups. You've gone to events.
+
+What is the, what is the thing that surprised you more than anything else about the dbt community?
+One of the things, that has really surprised me is there seems to be a firewall in people's minds
+between dbt core and, dbt Labs, the company. And people seem to have a a lot of dbt core users have
+a very strong presumption that, the company doesn't have anything for them. And I think that has
+never been true, and it's less true than ever now. We're trying to do a lot of things for dbt core
+users. I've seen this in particular with state. You know, state was was built so that it would work
+for everybody, so that it would work for dbt core users. And it has been a little bit of a battle,
+getting people to just realize that that's a thing, that there are things we are trying to do for
+you as dbt core users, even if you're not on dbt cloud.
+
+And similarly, you know, the work we've done with the Versus Code extension, with wizard, we are
+working hard, making additional things for dbt core users. And and I hope to break down that
+perception over time. It has really been a surprise to me what a strong barrier there has been.
+You're saying that open source communities are more complex than you anticipated? Indeed. Indeed.
+Yeah. So I'll be honest.
+
+There were people in this community who were a little nervous a year ago at this event. Fivetran is
+a more traditional commercial business and merging with an OpenCore project. What would you say to
+somebody in this room who still has that worry? I don't know. I don't think anyone in this room is
+worried about that. I well, I would say, first of all, that people who have that concern, are going
+to be persuaded by actions, not by words. And I hope that what has happened over the last year has
+at least started to persuade people who are worried about that. I would also say that, if I'm going
+to say some words about it, that the fundamental logic of bringing Fivetran and dbt together from a
+commercial perspective is not complicated.
+
+It's about having more things to sell to the same audience. And that is actually very synergistic
+with open source. That means that we don't have to get all of our growth out of the dbt product. And
+so we can actually be a little bit more relaxed, about open source and free things. And I think,
+speaking of actions, you have seen that. We have made the dbt two license for the Rust engine more
+open source, last week. We have, just, I think, last week, this might still be under a feature flag,
+we removed the sign in wall from the Versus Code extension. We removed the user limit.
+
+So I think, you are seeing a general attitude of permissiveness from the combined company. And if
+you think about it, it makes sense. A a bigger company that is fundamentally aligned with the values
+of DBT, around open data infrastructure is a good thing, not a bad thing for open source. A bad
+thing would be, you know, if we just wanted to squeeze every dime out of all the DBT users. But that
+is very much not what we are trying to do. So you mentioned ODI. In the past year since we were
+originally talking about ODI, has anything changed or updated your priors on this, either inside the
+company or externally? Yeah.
+
+We are we're in the adoption phase now. So a lot of users and data architects out there have been
+putting Iceberg to me, Iceberg is really the heart of ODI. A lot of a lot of people out there have
+been putting Iceberg in architecture diagrams for a couple of years now, and we and others in the
+industry have done a lot to make it easy to adopt Iceberg. And now is the phase of how many people
+are going to translate those plans into action. And one of the things we track very closely, if you
+walk around the Fivetran office in Oakland, you will see on some of the TV dashboards is the
+percentage of customers that are delivering their data, first to Iceberg. All those customers are
+then it's it's getting read, by one or more, compute engines on the other side, but that stands at
+about 7% right now, and it's growing rapidly. And that is one of one of our OKRs, for this year is
+to see that go up rapidly. So I think we're in the adoption phase of ODI right now, and we are
+finding out how serious people really are about it.
+
+I love that. Last last question while we got you. What is the one thing that you want this community
+to hold you and the entire company accountable to? Yeah. To openness and interoperability. So we are
+serious about, this idea that we have a lot of things, that we can help you with. You're hearing a
+lot of new things, this week that we can help you with. But we are also committed to helping you
+build your data stack your way.
+
+And you're gonna make choices at each of these components, and we are committed to working well,
+with the entire ecosystem, with all of our partners in that ecosystem. We are not trying to build a
+walled garden, so please hold us accountable to that. I love that. Alright. Thanks, George. Thank
+you. We'll see you up on stage in in a little bit. So in the past year, there is one question that
+I've heard more than any other.
+
+What's the strategy? I hear this from practitioners and journalists and partners and investors. It's
+the first question that comes up in every single conversation. The short answer is this. Fivetran
+and dbt have, over the past decade, built the best tools for their respective categories, ingestion
+and transformation. You put those two together and you have the dominant player in the category that
+we all know as ETL. But that's the boring part. I mean, it's it's absolutely true, but that's about
+what both companies have done in the past decade, not what we're doing next.
+
+What we're doing next is simply this. We're reinventing the data platform with openness and AI at
+its core. The most successful data platforms today are becoming increasingly verticalized. They want
+to store your data, run your compute, manage your metadata, and serve your agents. All of it, end to
+end. And while you're not required to use every feature, the platforms make it harder at every turn
+to go off platform, to make multiple platforms work together. Now, this is a good business and it
+can make things easy for customers. Just use us and we'll make sure it all works.
+
+But there are trade offs. Over time, it tends to be more expensive, less flexible. It's centralized
+and slow to change. Real drawback in an era where change is the only constant. We see things
+differently. At both DBT and Fivetran, we have always focused on data tech as LEGO bricks, easy to
+plug together and easy to separate. We do a ton of work to make that true. Making your experience
+consistent across every data platform, data source, and model provider is one of the hardest
+problems that we solve every day.
+
+Our goal is to build an end to end data platform fit for the needs of today. Customers should be
+able to buy an out of the box integrated solution or choose your own adventure using high quality,
+truly open interfaces and open source components. Here's what that looks like to us. Start at the
+bottom with data storage. We're using Iceberg Tables and Polaris as our primitives. And just like
+George was talking about, we'll help you load this data into this open format today using Fivetran
+Managed Data Lake Service. It's one of our fastest growing offerings. What about open compute
+though?
+
+Well, today we are announcing our own foundational compute primitive. We call it Lake Compute. Built
+on dev DB, Light Compute is lightweight, it's portable, and on v2, you can deploy it alongside any
+data platform that supports Iceberg. This gives DBT users the flexibility to pick the right compute
+for the job. And Elias will show you more in a few minutes, but we're announcing this offering in
+private beta today, and it is already powering workloads for DBT customers. Next up, ingestion.
+Pipedrans connectors contribute to an open ecosystem by making data portable, And we're also leaning
+in on open source for connectors. We've shipped Fivetran connector SDK under the MIT license and
+there are already over 100 community contributed connectors in the catalog.
+
+We're planning to release more and more connectors as OSS over the coming year. Next up,
+transformation. Dbt, with the significant upgrades in V2, is more than ready to be the foundation
+for open data transformation moving forward. The future of DBT is now high performance, agent ready,
+and licensed Apache two. But you know what? The Open Data Stack doesn't stop at infrastructure and
+pipelines. You're going to hear a lot today about the context layer, metadata, semantics, vector
+search, evals, and analytics agents. And in a few minutes, we will show you how our first ever foray
+into data vis is going.
+
+Of course, it's open source and agent first. This then is what we're building, a complete data
+platform that at every level is built from the highest quality LEGO bricks that you control and can
+adapt to your environment based on open standards and open source, enabling portability across
+sources, platforms and models. This platform will both be a complement to and an alternative to the
+vertical platforms that we've all come to know and love over the past decade. Our belief is that
+this is how data platforms of the future will be built. Me, personally, I think that this is the way
+that data platforms should be built. Okay, folks. Thanks for your time. I am looking forward to
+catching up with each and every one of you in the next few days.
+
+And now to share more about DBT and our approach to open data, join me in welcoming to the stage
+Elias Taferia. Alright. Hey, everyone. My name is Elias, and it is really good to be back up here
+with you all for DBT Summit. Whew. A year ago, I stood on this stage. I made you all a promise. That
+the Fusion Engine would provide a step function improvement to the experience of building with DBT.
+
+I told you about real time feedback during development. AI ready metadata and parse and run time
+optimizations that made dbt go vroom. And we we did that. We did. You heard from Tristan. V two is
+GA. But this innovation, it came at a cost to both our engineering team and our user base. Core and
+Fusion, they were separate code bases, separate engines.
+
+Right? They were separate constructs that you all had to deal with. And today, that changes. You
+just heard Tristan announce the consolidation of these engines, so folks, Fusion had a good run.
+Let's pull one out. After nearly 3,000 issues closed, over 10,000 PRs merged, and over 500 features
+built with full compatibility, it's time to call Fusion what it is, version two of the dbt engine.
+Yes. Yes.
+
+Today we have over 9,000 weekly active projects running on V2, including 36% of our platform
+enterprise customers. That's a lot. That's a lot. And the gains across our customer base are
+demonstrating a real foundational shift. A university out of Australia with 3,500 models, they saw
+parse times go from three minutes to eighteen seconds. A global investment firm reduced run times by
+over 40%. And you just heard from Tim at Spotify how drastically reduced compile times are
+delivering real cost and developer productivity gains. Let's talk about adapters, though.
+
+I'm excited to announce that today, Redshift, BigQuery, Databricks, DuckDV, and Snowflake are going
+GA. Oh, yeah. Oh, yeah. ClickHouse and Spark are in beta. They're available to test locally right
+now. And we're hard at work to bring Athena, Fabric, Postgres, and many more over the line in the
+coming months. Yeah. Yeah.
+
+Adapters. There's a lot of them. But folks, v two is not the only way to level up your dbt
+deployment. Let's talk about dbt state. Last year, we announced state aware orchestration, known as
+SAO. A new paradigm for more intelligent job orchestration in dbt. D b t state is the evolution of
+SAO. It's now more powerful and available wherever you work with dbt.
+
+State intelligently skips models when the code and upstream data hasn't changed, and that amounts to
+15 to 30% savings on your compute bill and serious performance improvements. But folks, that's just
+the beginning. Early adopters like Joe and the Juice, they're getting those cost savings in
+production, but they also love the developer experience improvements that come with dbt state. And
+so, folks, I'm very excited to announce that dbt state is GA. Oh, yeah. It's available however you
+run dbt. On v one, v two, in the dbt platform, on airflow, and even through a native integration
+with Snowflake dbt projects. Yeah.
+
+We just can't stop g ing things today, And now, folks, it's time for my favorite part of any good
+keynote, and I think yours too. Yeah. The live demo. Let's do it. Alright. It's gonna be fun. Come
+on. Come on.
+
+Okay, folks. I got a Versus Code window open here with a dbt project that powers the data for a
+video game studio called JAPL Games. Okay. And I have dbt v two installed locally. Let's see it.
+Dbt2.o. Nice. Now we all know that in v two, parse times are lightning fast.
+
+Right? And this decreases the runtime of every dbt operation. That's not the only part of e two
+where we invested in speed. The first feature I want to talk about today is our new super fast SQL
+fluff compatible linter. Let's do it. So I can run dbt lint. Watch that. Boom.
+
+Lightning fast feedback. Right? And this is feedback about how my code can improve. Right? How it
+could be more optimal. How it's not following best practices. If I command click to go to one of
+these files, you'll see that our Versus Code extension, it it it surfaces that diagnostic right
+there in line. This also integrates natively with dbt wizard.
+
+Super cool. And the nice part about this linter, it's configurable using the same SQL fluff file you
+use today. Look at that. Migration's a total breeze. The only difference, we have five dbt specific
+rules, like hard footed references, which catches when you forget to use a ref or source macro in
+your dbt model. Classic dbtism, you know? Now on the theme of optimization, the next feature I want
+to talk about is dbt test. So, I can run a test here.
+
+Right? Runs as usual. It's going to run all the unit tests and the data tests in my project. And,
+it's going to complete. It will complete. It does complete. Okay. And, there are 156 data tests in
+this project.
+
+That means we ran 156 individual queries against the warehouse. That's a lot of queries just for
+testing, right? So with v2, we thought, is there a better approach? Could we run less queries and
+assert the same things about our data quality? And it turns out we can. And this is available
+through a new feature in v two, called batch testing. So when I add this batch tests flag here,
+right, watch what happens. So first thing you'll notice is that the run goes faster.
+
+Right? But what's going on under the hood, let's take an example here like fat transactions, this
+model. This model had five not null tests. And look at the cool little logging with this like tree
+structure. Right? What is it telling you? Well, it's telling you that these five not null tests,
+instead of running as individual queries, they were batched into one scan against the warehouse
+instead of many. Yeah.
+
+Yeah. Very cool. Right? So in this case, we took 65 tests. We were able to reduce them down to 21
+queries and meaningfully reduce the runtime. That's batch testing. Very cool feature. Very cool
+feature.
+
+But I caught a log here that I'm kind of interested in. Right? I want to look at this log. It's,
+it's this one. Right? Test int player spend segmentation. This is a unit test that passed. Right?
+
+And this unit test ran in ten milliseconds. That is awfully fast for a unit test to run. Right? Let
+me remind you how unit tests work. They take data I have defined in my DBT project that I use to
+test against. They embed that into a big SQL query. Then they run that SQL query against the
+warehouse, return a result, compare the results, and give me feedback. Right?
+
+Had all that happened in ten milliseconds? I'm skeptical. I wanna look at the config for this unit
+test. I wanna see what's going on here. So gonna go over here, to my intermediate YAML where this
+unit test is defined. And, there's the unit test right there. And, woah, look at this. There's a new
+config attached.
+
+Compute local. That's right, folks. The next feature I'm here to announce to you all today, local
+execution of unit tests on dbt v2. Yeah. Very cool. This feature is experimental. It works for
+Snowflake and BigQuery. And it works by taking, Snowflake and BigQuery SQL, transpiling that to
+DuckDV on the fly, and running that DuckDV locally against the given data here.
+
+Whole thing runs locally. Lightning fast. That's very cool, folks. So that's dbt v2. There's a lot
+of cool stuff here. I could go on and on about it. But I want to move on. And next, I want to talk
+about dbt state.
+
+So I'll go to my dbt project.yaml here. And I have a flag set. Managed state is set to false. Right?
+It's off right now. I'll set this to true to turn it on. And then, I will, run a dbt build. Right?
+
+So we're on this dbt build, something sort of magical is going to happen here. Right? And that's
+that state's going to figure out that none of the source data nor the code in my project has changed
+since the last time I ran a build. And as a byproduct, we're able to reuse, right, see this log line
+right here, let's find one, reuse the large majority of models and tests. Right? Every one of these
+reuse lines, that's dbt intelligently skipping that model build. Right? That's DBT not spending
+warehouse credits during this invitation.
+
+Right? Yeah. That's the savings, folks. That's 15 to 30% right there. That comes from this feature
+alone. But earlier I told you that dbt state goes further. That it actually helps the developer
+experience too. Let's look at how that works.
+
+I'm gonna open my profiles YAML here. I have a target, dev cool guy ninety three. That's me.
+Alright? I'm dev cool guy ninety three. And I just joined the team. Right? My schema is cool guy
+ninety three.
+
+And, I've never built this dbt project in my dev schema before. My project today is to modify a
+model called dim platforms. And because I'm dev cool guy ninety three, I will update the fee there
+to 93. Naturally. Right? Let's see here. So now I'm going to do a dbt run of this model, dim
+platforms. But I'm going to do it in my target, right?
+
+Dev cool guy at 93. And we're going to run that. And because I've never built this in my dev scheme
+before, and I just made this change, it's going to to have to rebuild naturally. Right? So let's see
+that happen. We're gonna rebuild dim platforms. And, it is going to succeed. There it goes.
+
+Had me nervous. It succeeded. Good. So it built in cool guy 93, which is my dev schema. Right? But
+if we look at the compiled code, you'll notice something sort of interesting here. And that's that
+the rep staging platform is resolved to prod. So the I built this model on dev, but it deferred to
+prod.
+
+Now traditionally, this is deferral. This works by taking a manifest JSON from my last production
+run. I have to pass it in by the state flag. I have to manage that state. Right? But with dbt state,
+auto deferral is managed for you out of the box. Yeah. So that's auto deferral.
+
+It's part of dbt state. Very cool feature. Let's say I want to build this upstream model, staging
+platforms. Let's say I want to build that in my dev schema two. I'm I'm gonna command click to go to
+this upstream model definition, and then I'm going to, slightly modify my last command. I'll add a
+plus to the beginning. This will build the upstreams of dim platforms. Right?
+
+So let's do that. Let's build the upstreams of dim platforms. Now because I've never built staging
+platforms in my dev schema, we all expect this to rebuild. Right? In-depth. It should rebuild. Woah.
+Woah.
+
+Look at that. No. It was reused. How was it reused if I never built it in my dev schema in the first
+place? Well, folks, that's because dbt state supports auto cloning across environments when it
+recognizes a model you're trying to build in one environment has already been built and is up to
+date in another. Yeah. Auto deployment. Dbt state.
+
+That feature is awesome. I think that's something that's so cool. Cool. So folks, that's dbt state.
+I don't know why I clicked query results, but so frankly put, if you're not deploying on dbt state
+today, you are leaving money on the table. Which is why I recommend everyone not on state in this
+room, after this keynote, go up to the Discovery Hall, talk to our dbt experts in the Experts
+lounge, and get your project on dbt state. It works for v one, v two, anywhere you deploy dbt. It's
+time to get on state.
+
+Okay. That was a lot of stuff. A lot of features. A lot of cool stuff. But you know, I got one more
+thing to show you today. You know I got one more thing. I'm going to go to a model here, Fact High
+Scores. Now Fact High Scores builds every single day, and it has some window functions, and it
+processes a lot of data.
+
+Right? It's, frankly, it's pricey. It's It's a pricey model, right? And so what are my options to
+reduce the cost of building this model? Well, I can refactor my data model. That's a lot of work. I
+could migrate this dbt project to a lower cost warehouse. That's a lot of work.
+
+Or or I could migrate just this model to use our new low cost lake compute service while keeping the
+rest of my project on Snowflake. Right? Like Tristan said, Lake Compute on v two is interoperable
+with any engine that supports Iceberg. So let's do that, folks. Let's migrate this model to Lake
+Compute Live right here, right now. Okay. First thing, when approaching any Lake Compute migration,
+we need to make sure that the upstreams are all materialized to the iceberg table format. Right?
+
+That's how Lake Compute can read the data. So I'll go to this upstream, staging high scores, and I
+will add one config, one config, table format equals iceberg. And this model now built as an iceberg
+table. That's crazy, first of all. Iceberg migration just became a breeze. But then I'll go back to
+factoid scores here. And guess what? Once again, in one config, I will migrate this model to run on
+late compute.
+
+I just attach adapter equals late compute. Just like that. Now what this config does, it tells me to
+instead of submitting this query to Snowflake, submit this query to late compute, to our auto scale
+duck DB, instances in our cloud. Right? So let's do it, folks. Now before I I deploy this change, I
+need to turn off state, which I don't forget that. And then we're gonna do it. Dbt run dash s plus
+fact high scores plus.
+
+Right? So this will run the upstreams and downstreams of fact high scores. Let's do it. So the first
+thing that's going to happen, staging high scores is going to rebuild as an iceberg table. There we
+go. It's done. Next, fact high scores has now been suspended to our late compute service. This is
+running on dbt.
+
+And it's able to pull the upstream data from Snowflake because that data is an iceberg. Right? Now
+it's running on late compute. It's doing its thing. And at the end, when it writes that data out,
+it's gonna make it available such that the downstream model on Snowflake, it's done, first of all.
+Crazy. And Mart layer player leaderboard, yes, that just ran on Snowflake. We did it.
+
+Woo. Okay, folks. That's a late compute deployment. Come on. Okay. Recap of what I saw, because I
+was, like, speed running while this thing was building. Staging and high scores built as an iceberg
+table. Nice.
+
+Fact high scores was submitted to Lake Compute. Right? DuckDB read the data from Snowflake in
+Iceberg. It was able to process that, transform it, and it wrote it back out, such that Mark Player
+leaderboard, which ran on Snowflake, would be able to read the results of that execution on DuckDV.
+First first multi adapter dbt invitation. Public one. First public one. We did a lot of testing, you
+know.
+
+That was awesome. Alright, folks. That's my demo. Can you believe how, like, consistently that stuff
+all works together? It's awesome. Alright. Quick recap of what we saw. Three new major improvements
+to dbt.
+
+One, Fusion is v two, and it's GA. It's ready to power your data workloads today. Number two, dbt
+state is GA. So you can run only what change, control your warehouse costs, and improve developer
+experience for your whole team. And three, late compute is in beta, allowing you to adopt flexible
+cost effective compute one model at a time. There are sign up forms in the website, also in our
+apps, so I highly recommend you add yourself to that list if you're interested in late compute. But
+folks, you don't have to take it from me. I wanna bring up someone who has seen the vision from the
+beginning.
+
+He and his teammate, Matt, are the entire data team at OB Insurance, and they have been design
+partners with us on v two, dbt State, and Lake Compute. Folks, please welcome Tyson Dobrinick. Good
+to see you, Matthew. How are you? Good. How are you? Tyson, good to see you. Thanks for coming.
+
+Yeah. So start off by telling everyone who Obi is and what, your data team looks like over there.
+Absolutely. Obi is primarily a landlord insurance company. Our data team is just me and my coworker,
+Matt. I'm just pointing in a direction. I think he's right there. Hey.
+
+I've gone in the right place. Hey, Matt. And then so it's just him and I. Small, mighty team, but we
+have a handful of data, data analysts as well. Awesome. Awesome. So as a long time adopter of v two,
+I wanna start there. What is your recommendation for teams who are considering a migration now?
+
+Absolutely. We're such huge fans of of v two. We've, we started off as a greenfield project with v
+two. I think the teams that wanna migrate from v one to v two can mainly if they're using, if
+they're using automated tools like AgenTic Workflows, what they could do is check out the dbt's
+agent skills package. That's a huge one. That was a huge unlock for us, not being able, being able
+to see what needed to be fixed, agentically. Yeah. And then having Claude just do that.
+
+Yeah. Just let Claude do that. And now you have migrated. You've been on it for a year. Yeah. Many
+of your production jobs were on it for, I think, the entirety of the last year. Yeah. Is this
+stable?
+
+Is it ready to handle production workloads of all the, yeah, teams deploying dbt Audio? For us, so
+stable. We have more than we have about a 99% uptime with our production models. It's we have 400
+dbt models that are feeding our our business, and, it's working great. Yeah. Fantastic. That's what
+I like to hear. Yeah.
+
+Yeah. Yeah. Yeah. Let's give that an applause. Yeah. 99%. Yeah. dbt State went GA this morning.
+
+You've been around it for a while now. How would you recommend teams get the most out of dbt State?
+Yeah. Big fans of dbt State. We've been using it when it was just available for v one, before it was
+even available for for v two. Huge unlocks. When you said that, you feel like people are leaving
+money on the table. That's exactly how we felt.
+
+Yeah. I recommend, if you're a cloud customer, just going into the your environments and just
+toggling it on and see the cost savings that come from it. We were able to see about 40%, but I love
+that the dbt State team has made it so configurable that you can go into end model configs and you
+can kind of tweak the larger works for it. Yeah. We've been able to see up savings of up to 60% for
+our largest workflows. I won't get into it here. I'll talk about it in my session if you wanna join
+tomorrow. Nice plug.
+
+I didn't like it. Yeah. 60%. Yeah. That's that's meaningful. Yeah. Now last thing to talk about
+here, Lake Compute. You just saw me run models on Lake Compute.
+
+Right? And you've been actually doing that on real workloads. Right? Your DBT project. How are you
+thinking about which jobs go where? Absolutely. Out of all the products that we've tested over over
+the time that we're working closely with dbt and Fivetran, I would say that late compute is the one
+that we're most bullish and excited on. Being able to to dictate where you want your workflows to
+run, whether it be in your your regular compute layer like Snowflake or if you wanna run things
+locally, it's a dream that I had to corner some dbt employees last year and say, hey, I need you to
+listen.
+
+This is what I want. And so for it to be able to come to fruition today has been incredible. So late
+compute, currently, with our testing, we're at about 10% of all of our project models. We expect
+that to hit up to 80% by the end of the year 80%. With the eventual goal of being able to use
+whatever models we want wherever we want, you know, something that's truly agnostic. And, yeah,
+really excited. That's the interoperability we're looking for. Yeah.
+
+Awesome, Tyson. Thank you for your time. Great to have you up here. All right, folks. There is a
+larger vision forming here. We've gone beyond bespoke tools that once provided the foundation for
+the modern data stack. Now we are leveling up to become a complete and holistic open data platform.
+We'll have sessions, demos, lightning talks and more about all this throughout the conference.
+
+And I'm looking forward to continuing the conversations with all of you. Thank you very much. And to
+talk about where this vision fits into AI, I'm excited to invite my colleague, Tyler, to the stage.
+Hello, Las Vegas. My name is Tyler, and I want to share a secret with you all. I love to level up.
+Two years ago, I was sitting where you were. Now, I work at DBT, and I'm a part of the performance.
+
+That has to be a level up, especially because I'm a theater kid. But I used to be an analytics
+engineer. And back then, leveling up meant I was bridging gaps between stakeholders and their metric
+definitions, supporting a governed layer of trust around our company's data. But now, AI is here and
+agents are using that data to answer your coworkers questions while you're asleep. The teams I meet
+who are winning with AI, they don't have the biggest budgets or the newest models burning through
+those budgets. They they're giving their agents access to that trustworthy metadata. And so that
+analytics engineering work you've been doing for the past decade, it's actually just context
+engineering. You engineer context.
+
+Today, I'm going to share recipe for successful context engineering because I wanna help you make an
+impact right now by leveling up. I give you meaning, reach, discovery, and coverage. Thank you,
+everyone. That's my talk. Oh, you want more context, definitions? Alright. Let's cook. Ingredient
+number one, meaning the right answer is the accepted definition because AI thinks it's correct all
+the time.
+
+Which version of revenue should you use? They're both right. All four of them. But with the semantic
+layer, you define a metric once and each consumer of that data, every person, every dashboard, every
+query gets the same answer, the same definition everywhere. But how can you extend that same meaning
+to agents? Which brings me to ingredient number two, reach. So any agent can access that metadata.
+For years, reach meant a dashboard.
+
+If you were lucky, it was one that a human actually looked at. Right? But now, we chat with our
+data. Every week, I dazzle leaders with a simple prompt. What's my revenue? Show me the SQL that
+powered it and build me a chart I can share with my boss. Get dazzled. That's right.
+
+We're having fun today at DBT Summit. That conversational analytics is dbt's model context protocol
+or MCP server in action. It allows any agent to call your government metrics directly instead of
+guessing and burning up your tokens. You will love the dbt MCP. You're using it 68 times more this
+year compared to last year. And today, we're adding to the group chat. DBT is launching native a I
+integrations. Connect to these once and context is instantly available in the tools you've already
+bought in the places your teams already work.
+
+That's reach in action on your terms without losing any velocity. However, agents don't always know
+that d b t exists. They seek context in every tool you own and if they can't find it, well, they
+invent it. Right? For years, you've been diligently cataloging, tagging, and generating metadata
+backed by opinionated best practices. But this context currently lives in your YAML files. Agents
+are told that these are critical and central to your models. They need your structure, your
+knowledge, and your expertise.
+
+They need that shared understanding of company data. So that brings me to ingredient number three,
+discovery. Agents can find the right context fast. I bring you agent schema. You can clap. Try that
+again. I bring you agent schema. Thank you.
+
+We introduced this specification back in June. You might have heard of agent markdown files for
+coding harnesses like dbt wizard. This is similar. It defines the schema for agentic work. And the
+best part? These are just plain SQL tables. So any agent with SQL access can read it. You designate
+the schema in your warehouse and it becomes the first convenient place an agent looks for context.
+
+Your metric definitions, test results, business documentation, everything a hungry hungry agent
+needs. Alright, context engineers. Here's where we're at. Three ingredients to use. Meaning, so a
+metric has the same consistent definition. Reach, so any agent can properly access it. And
+discovery, so it can find the right context fast. But everything I've listed assumes that context is
+structured, cohesive.
+
+What if it wasn't? So I saved the best for last. Coverage. Coverage. Coverage. Coverage. So agents
+can understand your entire business. Consider pages of text, your wikis, that never ending support
+ticket, video transcripts, Slack threads you still haven't unsnoozed.
+
+Those agents are hungry for this unstructured context, but it's also a daunting task to make sense
+of this messy and amorphous data. But wait, with this level up, we're now context engineers. So
+let's treat this like any other input. We source it, model it, test it, and ship it. You build it
+once and define it everywhere. Now that we have the recipe, how can we make sure we have all the
+data? Structured or unstructured? You know what tool is really good at making sure you can easily
+ingest all of your company's data?
+
+Fivetran, that company with over 750 connectors and 18,000 customers. This is why our merger makes a
+ton of sense. I'm thrilled to introduce the Fivetran context layer now in private beta. This is a
+managed service to jump start your company's entire context journey from ingestion through
+activation using Fivetran and the dbt tools you already run. Here's how it works. Connectors are
+gonna pull metadata from dbt plus structured sources. And those pesky, unstructured, unmanaged
+sources I just talked about? We pull those in two, transforming them into vectors so your agents can
+actually search and find them alongside everything else.
+
+That transformational analytics work that used to be weeks of pain is now minutes of configuration
+bliss. Now a new powerful metadata layer is suddenly in your warehouse, creating tables that meet
+agent schema. That makes your context discoverable for any agent. And as we mentioned earlier, any
+authorized agent can access these tables. Our MCPs serve piping hot context wherever your team is
+already hungry with questions. That's reach. The Fivetran context layer not only makes it easier to
+initiate your context layer, but it also makes it cheaper to run. Even in this early stage, we're
+seeing agents burn fewer tokens, respond faster, and call less when compared to off the shelf MCPs.
+
+We're building this with design partners today, so stay tuned to learn more. So there's your recipe
+and your new found level up. I can't wait to hear how you're able to make an impact with these
+ingredients, contact engineers. But let's hear from someone using this recipe in the real world. At
+Okta, she spent the past year building structured context, and now her team is ready for what's
+next, conversational analytics at scale. Everyone, please help me welcome Pooja Crane. Welcome,
+Pooja. Can you tell us about your team and mission at Okta?
+
+Yeah. Thanks, Tyler. I'm a senior manager of analytics engineering at Okta, and our team is
+ultimately responsible for powering Okta's success with technology, data, and intelligence. Our
+number one mission on the data team is to make sure agents can be trusted with our data. And it
+turns out that trust is actually that same mission I've been pursuing my entire career by way of
+making complex things trustworthy. I've also always believed that data without governance is chaos,
+and now AI without context is a huge risk. So it has been a bit of a mindset shift on our team that
+our primary deliverable isn't really any one agent or data experience. Really, what we're
+responsible for is the governed context that sits underneath every single one.
+
+That reframe towards context engineering is exactly what we're envisioning. What sort of barriers
+did your team, encounter when building that? Yeah. Great question. So initially, we moved fast by
+building semantic views and agent definitions straight into the UI, where our agent instructions,
+metadata, and context had no separation. It was all folded into one monolithic field. That approach
+worked for a bit, and then we quickly realized that our context had no system of record. Our context
+was fragmented with no version control or auditability.
+
+Along the way, we also realized that our context was not reusable. So check this. You wanna use one
+piece of context from one place to the other, you would have to pick that context up from agent a to
+agent b, creating friction in our ability to scale that context. That's where dbt came in. We had
+years of experience governing artifacts there. So now we created a three layer agent context
+framework that essentially lives in dbt and goes through a pull request. This includes our context
+markdown files, our metadata on the YAML, our semantic surface, and even agent definitions, all of
+it visible in dbt. It is not only powerful to be able to see everything in one DAG, but also
+critical to note that the same pipeline that deploys our models also deploys our context alongside
+it.
+
+Wow. So now that dbt creates a single source of contextual truth, how do you make sure that agents
+can actually utilize this context? Yeah. So discovery of the context is truly the final step of the
+journey. The same governed foundation that we have in dbt is exposed outward via an open source
+standard for agentic context through agent schema. As context moves through our pipeline, a CI job
+writes to this agent schema right in our warehouse. From there, any agent with access to SQL can
+query it and get the context it needs. What this really does is give agents institutional memory.
+
+New agents won't know the difference between calendar year and fiscal year because they meet our
+data cold and don't really have that history or the context. But now these rules live in our context
+layer and can be looked up before an agent writes any SQL, resulting in improved context
+reusability, accuracy, and scale. Thank you so much for demonstrating how you're building this
+framework towards agentic context. I know you're still experimenting and ideating, but what early
+successes have you seen? Yeah. We're definitely early in our journey, you know, but the biggest
+early win I've seen is the speed of iteration. Before the context layer, every time an agent got
+something wrong, someone would have to go into the config and painfully figure out what to change.
+But now an analytics engineer on my team can update that context in simply a markdown file, merge
+it, and then every agent that reads that context is immediately smarter.
+
+No need to redeploy. No ticket to engineering. We're also seeing fewer wrong answers that look
+right. That's always the scariest failure mode. I'm sure everybody here would agree. An agent
+confidently returns an answer that's off because they didn't know about a certain business rule. But
+with the contact layer, we went from agents that could query data to agents that actually understand
+how to query a data and how to use it. And the the third and the final piece is interoperability.
+
+I think that piece has been huge. The same context that powers Cortex agents on Snowflake also feeds
+Claude through MCP. If tomorrow we were to add a third agent, it would simply read from the same
+agent schema with zero rework. But what truly needs to be governed and engineered is the context
+those agents reason over because context in itself is the final product. Thank you so much for
+sharing your story, Puja. Thank you. Thanks for having me. You can hear more at her exciting
+breakout talk later today.
+
+So this is the future I envision for you, analytics engineers. You all taking this recipe and
+leveling up into newly forged context engineers. Tools change. Models change. Your context doesn't
+have to. You're now in the best position to ride that wave and make an impact. Of course, all that
+context still has to get built. So to show me more, to share more, join me in welcoming to the
+stage, Sam Ferguson.
+
+Hello, Summit. What a magical morning. I'm Sam Ferguson, a product designer working on AI for DBT. A
+year ago, we got on stage and introduced our first DBT agents. And since then, we've learned a whole
+lot together. AI started out as a way to help you work faster, and it still does that. But now, it's
+also changing the job itself. The fundamentals haven't changed.
+
+You're still making sure people can trust the data through definitions, contracts, tests, semantic
+layers, all of it. That's analytics engineering. What has changed are the stakes. Because now, as
+both Tristan and Tyler said, you're not only building context for people, you're building context
+for agents. And agents don't just raise the bar. They 10 x the scale. That means more systems
+consuming your data, more decisions being made on your work, and somehow, still more yam. It also
+means more people using agents to explore the data and dig in on their own, and that's a great thing
+until someone vibes the dashboard and asks you why the numbers are off.
+
+And suddenly, it's your dashboard. The problem is that it was built by AI or how quickly it came
+together. It's that the logic behind it is isolated. And this isn't a new problem. You've already
+solved a version of it with SQL. dbt helps you turn scratch queries into governed version models you
+can trust. But the dashboard at the end of that pipeline, the thing someone actually uses to make a
+decision, still disconnected from the code producing the numbers. You can get blamed the model.
+
+You can't get blamed a dashboard. That's the gap we're closing. Because if people and agents are
+gonna build dashboards, the logic behind them needs to be accessible, something you can review and
+maintain and version alongside the rest of your projects, which means it can't just be another
+feature inside another tool. It has to be a language. It has to be a standard. So allow me to
+introduce dbt Charts. Still very early, but it's entering public beta. It's an open spec that any
+human or agent can read, write, and review.
+
+It lets you define charts and dashboards as YAML right next to the models that they rely on. So your
+dashboard can live in the same repo and go through the same PR and CI checks as the SQL underneath
+them. So, yes, yes, you can vibe pose that dashboard. The vibes will be immaculate, and the metrics
+will still be governed. Let's take a look at how it works. Here, I'm in Versus Code working directly
+in my dbt project. I've asked Claude to whip me up a report using dbt Charts. Instead of building
+another custom artifact, it makes a single YAML file that I can open and review right here.
+
+And that same declarative format can handle much more complex dashboards and reports still all in
+one file. Okay. So now I've got a dashboard, but it's still sitting on my laptop, and that's not
+where my team needs it. I wanna keep working on it and put it somewhere we can actually use. As soon
+as I push my work to Git, the dashboard is live so I can access all of the history, sharing, and
+collaboration features I need for a full BI experience. From there, I can keep editing whether
+that's directly in the YAML, through the interface, or with an agent and share it with my team. Just
+like that, dashboards become a part of your project's context. But someone still has to build and
+maintain all of that context, so we also created dbt Wizard to help you do all of it.
+
+Wizard is our dbt agent built specifically for analytics engineering. It works directly across your
+models, lineage, contracts, tests, and semantic layers. It can take a task all the way from
+investigation through validation. And today, I'm excited to announce that dbt wizard and the dbt
+platform is available in public preview for every team. You can use it directly inside the Studio
+IDE or through its own standalone interface. And if you're already on a dbt plan, we're including
+usage so you can start building with it now for free. But as teams started using wizard, one thing
+became clear pretty quickly. Your work doesn't stop when a model ships.
+
+Someone asks what sounds like a quick question. We all know how that goes. Sometimes the answer is
+all you need, and sometimes it points to something you can improve. But the important part is that
+the question and the change it inspires aren't independent workflows. They're part of the same core
+feedback loop. And just like we saw with dashboards, when that work happens in separate tools, the
+context can get lost. Keep the questions connected, and they turn into improvements. That's what
+we're doing with dbt wizard's new explore mode now in public preview in the dbt platform.
+
+It gives you and your business users a way to ask questions in plain language and get answers
+grounded in your dbt projects. And because it's using the same projects you already maintain,
+there's no separate copy of your logic or context to keep in sync. So for the first time, we can
+bring business users into the dbt Platform not just to get answers, but to be a part of how the data
+gets better. And when one of those questions does turn into work, Wizzards there to help you take
+that on too. Like here, where I've asked Wizzards to define a new semantic layer metric. To take
+that on, it first figures out what tools to use in which context it needs. Before generating
+anything, wizard pulled in a doc and a skill on how to build a semantic layer. Then it followed the
+project data back to the models and measures that metric would depend on.
+
+And all that routing happens for you. So you don't have to wire it together yourself or keep it
+working over time as things change. But the best part is that winner doesn't just stop at the code.
+It checks the surrounding lineage, compiles the changes, fixes any mistakes it catches, and verifies
+the results. And when it's done, I can preview the output itself so I can understand the impact of
+the changes visually before I even dig into the code. But wizard doesn't make the final call. You're
+still the one who decides whether changes shift. But now you can spend more time reviewing the
+outcomes instead of all the steps it took to get there.
+
+Alright. So far, you've seen what Wizard can do in the dbt Platform. But, hopefully, you're picking
+up on a trend with some of our recent product announcements. We're making features that were once
+limited to dbt Platform customers available anywhere you work with dbt, whether that's in the
+platform or from the comfort of your local CLI. And that includes wizard. So let's talk a little bit
+about local development. Something interesting happened when we brought wizard to the CLI. Once it
+could work directly in your local projects, you started giving it bigger, more complicated tasks,
+and let it keep working while you moved on to something else.
+
+And it was great. But the more wizard took on, the harder it became to follow in a terminal. So we
+started thinking, how can you keep what you liked about the CLI but make it easier to see what dbt
+was doing, jumping when you need to, and move between many active threads without sending you back
+to a browser? Because, let's face it, terminal Windows seven or eight is where things start to get a
+little crazy. The answer was to give wizard a home of its own. Today, I am thrilled to introduce the
+dbt desktop app now available in five and beta. It gives you more room for project work that takes
+longer or needs to happen at the same time. You can have multiple tasks running at once, and wizard
+keeps the changes isolated so they'll never conflict.
+
+But the biggest difference from the terminal is that the work is so much easier to see. In this
+chat, I can quickly review wizard's changes, inspect the downstream lineage, guide how the updates
+get validated, and file a PR. And maybe one of those changes raises another question. I can comment
+directly on something wizard said or did or even on the data itself and ask wizard to dig in
+further. But I'm still deciding what happened at every point, and I can always choose to keep going.
+And for me, that's the real value of the desktop app. Not just finishing that refactor faster, but
+being able to notice something, ask a question, kick off a new thread, visually explore, and
+naturally follow that train of thought all in one place. We started by saying the job has evolved.
+
+You're not just building models anymore. You're engineering the context your entire organization
+depends on. And everything we showed you today, dbt Charts, wizard explore mode, the CLI, the
+desktop app, is built to help you do that work. The more people in the loop, the better the context
+gets. And with better context, everyone can trust what's built on top of it so your teams can ask
+more ambitious questions while you get to spend more time focused on outcomes everyone feels great
+about. That's what we're building towards. And there are a couple of ways you can see more for
+yourself. Join us for breakout sessions where we'll go deeper on everything you saw today.
+
+And if you're using dbt core, stop by the power up station in our booth, and a dbt expert will help
+you get wizard installed today. We can't wait to see what you build. Now to help us tie the stack to
+the broader industry and our open data infrastructure strategy, Please join me in welcoming back to
+the stage, Jeremy and Grace. Wow. What an exciting morning. dbt v two is GA at last. More than 9,000
+projects are already using it in production, and it's not just a faster rewrite of v one. It also
+ships with many exciting new features to level up your dbt workflow.
+
+Linting, batch data tests, unit tests running locally, more efficient builds via dbt state. The dbt
+engine is ready for the era of agentic analytics. Speaking of agents, we had dbt MCP, dbt wizard,
+agent schema, charts, and context layer, all leveling up how DBT and AI work together. Did you did
+you catch the end of Elias's demo earlier? I mean, he added a single line of code in his dbt project
+and suddenly it ran with different compute. All possible thanks to Iceberg, an open standard for
+table storage adopted by the most important vendors in the data industry. And we have customers like
+Tyson at OB Insurance using this right now. Yeah.
+
+Yeah. But do do our partners know about that? I mean, the dbt users aren't limited to a single
+warehouse anymore? They do, actually. And we're gonna talk about it with them right here on stage.
+Alright. Good luck out there. See, we've talked a lot this morning about open data infrastructure.
+
+But what does open actually mean? Do open standards require open source projects governed and backed
+by a software foundation in order to have teeth? Must an open implementation be something that
+anyone can host for themselves? And finally, how are data teams beyond the early adopters using open
+standards in reality today? To discuss that vision of a more open future, the promise and the work
+still cut out for us, I'd now like to welcome on stage some of the leaders who are driving the
+development and adoption of open data infrastructure. Principal engineer at Snowflake and member of
+the project management committee for Apache Iceberg, Russell Spitzer. Cofounder and CEO of Mother
+Duck, Jordan Tagani, vice president of Microsoft IQ and Microsoft One Lake, Dipdi Borkar, and CEO of
+Fivetran and dbt Labs, George Frasier. Alright, everyone.
+
+Thanks for being here. The thing we're here to talk about is what makes a platform or a standard
+actually open and when is it just marketing. But I wanna start with something specific. Let's talk
+about data security and access controls. See, this is the biggest challenge we see with many of our
+largest customers adopting Iceberg and multiple compute engines today at scale. How can we enable
+flexibility while preserving unified governance? Russell, I want to start with you because you're
+part of Iceberg. There's been a lot of work lately in terms of bringing governance into the Iceberg
+standard.
+
+Yeah. I mean, it's actually been a really exciting time recently in the Iceberg community because we
+finally got into the Iceberg REST protocol, something we call read restrictions, which means that
+the catalog, when sending you the table information, can also send you rules or restrictions that
+apply to the specific user asking for that table. And this has taken, I think, approximately two
+years and 30 or 40 plus engineers from a lot of different vendors getting together to at least
+establish something that we can all agree on to be interoperable with. So I'm really hoping in the
+near future, you'll be able to have one definition of your policies, one access point where you can
+talk to your catalog and get all that information into your engine at the same time. I think I saw
+the PR was merged, what, two weeks ago? Something like this? Yeah. I think we merged the spec techs.
+
+We are onto the implementation now. So I I wanna hear a little bit about that. Snowflake is
+implementing support for this? Yeah. We're we're very interested in this idea. I mean, one of the
+main reasons that I joined Snowflake and I work there now is to help them with interoperability
+because they realize that there's a lot of data out there and we wanna have access to it because I
+mean, I'm a little biased coming from Snowflake, but I think it's a a great platform to use for your
+data processing. So I I wanna enable that if I can. Dipti, maybe you could speak to how Microsoft is
+thinking about open governance standards for its compute platform?
+
+Absolutely. We are working very closely with Russell and Snowflake and team and excited about this
+being finally open. I mean, customers have paid enough of the lock in tax, as we call it. We're we
+now are at open formats, which is great. Security, we have to ensure that we don't get them locked
+in again. Right? And, we did this with, with fabric, not just with one engine or two engines, with
+five different engines. And we came up with a lake level security.
+
+But now we're excited to partner with, the community and iceberg in general and make it a standard
+so that data truly continues to stay open. There's some catalogs and others that might be trying to
+close things in, and we wanna prevent that from happening and actually keep it open. Well, excited
+to show that in the demo next year. Right? But you all got a chance to see Elias's demo just now. We
+announced our Lake Compute offering built on top of DuckDV. Now, Jordan, Russell, as vendors of the
+analytical compute yourself, how are you navigating this more open world? Do you welcome the
+competition?
+
+Absolutely. And, you know, I I caught up yesterday with with George and was talking about the, you
+know, the the dbt, you know, late compute offering. And, and I'm really actually excited about what
+they built. I love, like, I love a clever hack. I love a good, clever architecture. And how they're
+designing things really is targeting sort of non interactive transformation workloads. MotherDeck,
+on the other hand, the thing that we're really good at is sort of low latency, highly interactive.
+There's a human in the loop, somebody waiting for query results.
+
+And it's cool we sort of both built on both on DuckDV, kind of different ways of kind of arranging
+the how the service runs. And that's, I think, shows the power of these sort of open architectures
+because if you have your data in Iceberg, Delta, DuckLake, you can use any engine you want. You can
+use the best engine for transformation. You can use the best engine for low latency. You can use the
+best engine for agents and you know, sort of may the may the best may the best engine win. I think
+that's that's what's exciting, and I think it also, it sort of benefits the challengers versus the
+incumbents. So I'm I'm interested in, you know, how the point at rustle there. Interested in the
+incumbent.
+
+Yeah. How you how you think about it. I mean, my perspective is is almost always also type like open
+source and the Apache Foundation because I'm I'm an engineer at heart, and and really all I ever do
+still is that works. So I always see it from that user perspective as well where I'm like, we need
+to put our money where our mouth is. We have to let, you know, let all the doors be open and prove
+out on the value of the product that you can earn customers dollars. Like, we don't wanna be in a
+situation where it's a a threat that you just can't leave that keeps you there because that won't
+grow the business either. It doesn't let you compete. It doesn't let you make anything better.
+
+So I'm I'm a big fan of it. But, you know, I'm an open source engineer. And then I I I wanna I wanna
+provide a correction, which is the Snowflake is still a challenger. I think people in this kind of
+room don't realize, like, the incumbents are Oracle data warehouses and, like, Netezza and freaking
+Sybase, you know, which has not been a commercial product for twenty years. I cannot tell you. Every
+month, a 100, new companies show up and start migrations to Snowflake using Fivetran to replicate
+their data. So we we tend to forget in these tech forward audiences just how long the adoption
+cycles are. This this is so true.
+
+I feel like a a lot of people get focused on the the the newcomers and how they fight with each
+other while ignoring the fact that all of the data is so much data in Oracle still. Like you know
+Competition is great. Right? I mean, we have our own five engines fighting within each other in our
+own organization. Oh, that's nice. And and and that's and and it leads to better outcomes. Right?
+Best best practices, benchmarks, etcetera.
+
+I think it's it's you know, we've the one main principle is open and unified, and we need to make
+sure that we we have fabric working on it, snowflake working on it, databricks working on it.
+Everyone has to access the same data. It truly needs to be open. And as you said, may the best
+engine win. So what I'm hearing is we should be seeing DBT DAGs that have models running on
+Snowflake, Mother Duck, Lake Compute, Fabric, and Synapse, and And cross cloud, of course. Cross
+cloud, of course. But the fact that some of this is actually working today in production when it was
+a pipe dream a few years ago, it's pretty exciting progress for the industry. Okay.
+
+I want to take a slightly different direction here because we've been talking a lot about compute,
+storage, powered by Iceberg, but there's this other question that's gnawing at the open data
+infrastructure conversation. So at least our pitch for ODI is if data teams want to unlock reliable
+conversational analytics, they need a way to provide agents with flexible and trustworthy business
+context. And there are at least a dozen different ways of doing that right now. So is a semantic
+layer a necessary component of open data infrastructure today? Is it a nice to have, a pleasant
+aspiration, but not something that we should expect to see consolidation around in reality? George,
+I know you've got some opinions on this. Yeah. I do.
+
+I mean, I have been surprised over the last six months as the models have gotten smarter. Semantic
+model and there are many options, but a semantic model seems to be not only a necessary condition,
+for connecting your AI to data, but a sufficient one. It seems that that's all that they need. We've
+had great success, with with that pattern, and we found often adding more complexity to it doesn't,
+make it better, at least, you know, as of last week, because these things do change all the time. So
+what I'm hearing you say is the answer to the question of which semantic layer should I adopt is
+yes. Yeah. I if you look at how Fivetran context is built, it's designed. We think dbt semantic
+layer is a great place to define your semantic model, but a lot of people have semantic models that
+they have been maintaining for ten years in Looker or Power BI or, you name it.
+
+And so, the the way we build Fivetran context is it connects to your existing, semantic model and
+then publishes that information to your agent, so that you don't so that you can get started right
+away. Russell, I want to turn to you because in addition to being mister Iceberg, you're also on the
+Apache Aussie incubating project. Is that right? Yes. And so tell me a little bit about what what is
+the idea behind Aussie? What's the aspiration? Yeah. I mean, the the aspiration there is that we do
+have lots of existing semantic models all over the place, and every single vendor who's coming into
+existence right now is writing a brand new one with new hooks and new bells and all that sort of
+stuff.
+
+And we're we're hoping that, so that if for everyone who doesn't know, this is a project that was
+donated very recently to the incubator, for Apache iceberg for Apache. And its goal is to to kind of
+provide an interchange layer for all of these Symantec models. So hopefully, you can take your model
+from Power BI. Know that if you have a converter into this Aussie format, it'll go right into
+Snowflake on the other end. So the hope of the hope is to kind of do the same thing that we did
+with, you know, Apache Iceberg and kind of made the tables portable between all of these engines.
+And hopefully, we can do the same things for the models. Whether or not we'll require that in two or
+three years, I don't know. But, for now, it seems to be at least an area of extreme interest.
+
+Yep. I mean, I'll say last year on this stage or specifically down the street at Resorts World, we
+had a panel talking about OSI, the Open Symantec Interchange, which was an agreement to have an
+agreement between all of the different vendors and their Open Symantec models. And now, we actually
+have working functional code in a repository called Apache slash rossi that does this. Yes. There's
+there's a specification and everyone who would like to get involved with this. There are several
+working groups or people talking about ontology and about the model itself, about how permissions
+and other things should be exchanged with it. You know, it's a it's a new product, and there are a
+lot of people really interested. So check it out if you're interested in that that part of data
+table and formats.
+
+And and for us, you know, semantic models have been around for ten years as you were saying. Right?
+There's 22,000,000 Power BI semantic models out there. And, Copilot essentially, we've been seeing
+this over the last year. You have to have them to your point, George. I don't necessarily think it's
+sufficient, though. So there I would disagree because ontologies and richer abstractions and graphs
+are coming up where we it's evolved, evolved, evolved. Right?
+
+And so with the evolved, we're seeing that semantic model is absolutely a must starting point, but
+then there's more there depending on what you're representing from the real world. So absolutely
+start off with semantic models. We want them to be open. We are working on on, something as well. I
+won't steal, the thunder, from our conferences coming downstream. But, yeah, it's it's the starting
+point. Looking forward to see where this evolves. A lot will change in a year.
+
+If I could just jump in with, and and elaborate on, you know, points that both George and, Deepthi
+made. I think, George, you mentioned, like, complexity, and you don't need a lot of complexity. One
+of the things we've been finding is that actually the simpler you make things, like the actually,
+the better that the models are actually quite good at extracting information from just pure text.
+And, like, it almost almost doesn't really matter what kind of language modeling language you're
+using. But then, DBT, what you were saying is evals are super important because if you're going to
+have your CFO is going to be asking Claude like what was the revenue last quarter, you want to make
+sure it's right. And it doesn't matter how good your model is if like you don't have if Claude
+decides not to use it. And you kind of need to make sure that you're running those eval. So like
+because there is a right answer to that number, and you can test it.
+
+And so I think that's actually probably gonna be one of the key sort of data engineering jobs is to
+sort of maintain eval so that you can actually make sure that you're getting good results and good
+answers out of your context system. Some sort of open standard eval framework for natural language
+questions of your data. dbt product team, if you're watching this. Yeah. Is there an issue in GitHub
+yet? Okay. There's an agent listening somewhere who just created it. Oh, gosh.
+
+Okay. Let's check-in on the state of ODI. I'm looking for ground truth here because the marketing
+sounds awesome. Right? We put the slide up. It has all the LEGO bricks. Fantastic. I'm curious to
+hear what are you all doing to support ODI in practice in terms of actual road map that you're
+shipping against?
+
+And then are you seeing customers actually adopting this? Real scaled out deployments of iceberg,
+maybe of Aussie, multiple compute engines. What's the story? And, Divya, why don't you start? Sure.
+Absolutely. I mean, I think, it's about the numbers. The data shows that there is a ton of adoption.
+
+Certainly, vendors aren't supporting open source just for the true altruism or, you know, customers
+are asking for it. Right? That's where it comes from. With One Lake and Fabric, we have 40,000
+paying customers, three years since GA, and, close to 76,000,000,000 interactions a day on, open
+formats. It's all open formats. Right? No closed format at all anymore, in in, in Microsoft. It took
+a long time in open heart surgery to take thirty years of closed source SQL and convert it to open
+formats, but we are there.
+
+And it's important that we haven't stopped there. Right? Data is iceberg. We have to support Delta
+as a cloud. We we have to the bar is higher. We have IRC for metadata. Right? Security is now being
+going open as well.
+
+And dbt our dbt jobs, I'm excited. We have close to 2,000 customers using dbt in fabric in preview,
+and it's going g at the end of the month. So, that's exciting to see, actual open source usage. It's
+real, and, and it's just getting started. Other folks seeing customers adopting ODI today? I mean,
+that that's the reason I have a job. So yeah. I I'm I'm a principal open source engineer at
+Snowflake, and my job day to day is to make sure that all these projects are evolving and working
+well internally with with Snowflake because it's getting to the point where I don't think you would
+have imagined a couple of years ago where you could say, hey, you can talk to Snowflake and write an
+iceberg table directly to it from Spark.
+
+But you can do that today. Like that is the distance that's traveled. So, you know, you not only can
+have open source tables inside of Snowflake, you can use Snowflake as your open source catalog for
+those open source tables, which is kind of incredible change to happen in a short period of time. I
+think a year ago, everybody was talking about Iceberg and not that many people were doing it. You
+had sort of the people at the very top of the market, the largest companies that were they were
+doing it as as a hedge against Snowflake and, you know, and Databricks and and and sort of they're
+the ones that really care about lock in. But I think and there was also a handful of, like,
+hobbyists. They're like, this is a cool thing. I'm gonna give this a try.
+
+But I think the ecosystem wasn't quite there yet. And, in the last year, the ecosystem has really
+come around to it. And it's really started to just sort of disperse throughout. There's lots and
+lots and lots of people using it and getting real value, which we haven't been seeing until, I
+think, pretty recently. I think the main thing we're doing is making it easy to adopt. So as the as
+our partners, like Snowflake and Microsoft have made the key technical, changes to be interoperable
+with Iceberg. Now our role is to make it easy for existing customers who are who have a data stack
+without Iceberg to slide the Iceberg underneath it. And we now have customers doing those
+migrations.
+
+We have an API. We have not put it in the UI yet on the Fivetran side, but there are real customers
+doing it every week, through the API and a, agent skill, actually. And it will be, in the UI soon.
+So we are trying to make it, so easy that, you don't even notice that you introduced Iceberg into
+your data stack. Alright, folks. We're coming up on time. So I only have one last lightning round
+question and, only fun answers. Okay?
+
+Nothing serious. If you could force the entire world to adopt one standard, what would it be? And
+you're answering for yourself. So this isn't the Microsoft official answer to these. So it's not
+Windows. They already did that. Every meeting has to start five minutes, after you gotta prioritize
+coffee. That's a great answer.
+
+This may not be a popular, you know, thing at this on this stage, but I would say Duck Lake. Gotta
+shoot your shot. Sure. The thing that that has bothered me the most in my career is time zones. So
+if everyone could just just abolish local time stamps and we'll just always do UTC, and that would
+be okay. Seconded? So moved. For me, I think, agent schema, it's kind of has a special place in my
+heart.
+
+I think it's a really cool, pattern. It's like a generally, a passion project of mine is trying to
+get rid of APIs and turn them into just tables and databases. That API could have been a table. So
+that would be my answer. SQL is the interface. Exactly. Alright. Thank you all so much.
+
+Let's give a big round of applause for all of our panel participants. Alright, folks. Thank you.
+Okay, great. Get back out here. So, what did you learn about open data infrastructure? Well, we're
+seeing some real traction in the ecosystem across vendors and customers. But, we're still early
+here, and there's lots to figure out.
+
+Oh, brave new world that has such platforms in it. Okay. Let's maybe leave the the Shakespeare to
+me. I mean, you didn't even have a prop. So But maybe I can find one at one of the 150 amazing
+breakout sessions planned for this week. See, we'll have customers and community members talking
+about how they use DBT in practice at their organizations. We'll have partners and ecosystem leaders
+talking about how they're driving forward open data infrastructure through projects like Apache
+Arrow and Apache Iceberg. Berg.
+
+And DBT and Fivetran team members will be sharing more detail on all of our product announcements.
+DBT v2, state, wizard, context layer, compute charts, agent schema, and more. Come by the power up
+station in the DBT and Fivetran booth for hands on support using those new products with your DBT
+project. If at any point you need a break or some quiet time, you can visit the dbt full refresh
+room. We have a prayer room and lactation pods available. Make sure to download the dbt Summit app
+for information about all the breakouts, activations, and events through the entire week. Make sure
+to join the dbt community Slack so you can chat and connect with folks all week long. And also,
+don't forget We'll be right back here tomorrow morning for the community keynote.
+
+Okay. Thank you again so much for joining us this morning. We're excited to spend the week together.
+Let's make it a great one. See you out there. Bye, guys.
